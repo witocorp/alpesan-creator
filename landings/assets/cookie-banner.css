@@ -1,0 +1,36 @@
+.nk-cookie-banner {
+    position: fixed !important;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 999;
+    border-radius: 0px;
+    display: none;
+}
+.nk-cookie-banner{
+	color: #fff !important;
+    font-size: .8rem;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: initial !important;
+}
+.nk-cookie-banner a {
+    color: #fff;
+}
+.nk-cookie-banner button{
+    padding: .8rem .9rem;
+    background: unset;
+    border: 1px solid #d8d8d8;
+    color: #fff;
+    font-weight: 800;
+    font-size: .7rem;
+    line-height: 1.167em;
+    letter-spacing: .113rem;
+    text-transform: uppercase;
+    border-radius: initial;
+}
+.btn-primary:hover {
+    color: initial !important;
+    background-color: initial !important;
+    border-color: initial !important;
+}
