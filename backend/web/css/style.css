@@ -13,6 +13,10 @@
 .box_first_menu {
   padding-top: 15px;
 }
+.editH {
+  bs-gutter-x: 0 !important;
+  --bs-gutter-y: 0 !important;
+}
 .banner_head{
   background-color: #EA0605;
   padding: 10px;
