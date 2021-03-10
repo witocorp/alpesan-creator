@@ -28,7 +28,7 @@ body {
   padding-right: 2% !important;
 }
 .box_first_menu {
-  padding-top: 15px;
+  padding-top: 1.5%;
 }
 .form-check-inline {
   display: block !important;
@@ -82,7 +82,11 @@ body {
 #anexos {
   padding: 5px 20px;
 }
-.centrado, .box_second_menu img {
+.box_second_menu {
+  display: flex;
+  justify-content: center;
+}
+.centrado {
   display: block !important;
   margin-left: auto !important;
   margin-right: auto !important;
