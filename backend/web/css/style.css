@@ -106,7 +106,7 @@ header.container {
   margin-right: auto !important;
 }
 
-.box_third_menu a {
+.box_third_menu {
   text-align: end;
   padding-right: 2%;
 }
