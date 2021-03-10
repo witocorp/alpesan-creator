@@ -156,7 +156,7 @@ $this->title = $nombre;
           }else{
             $.ajax({
               method: 'POST',
-              url: 'https://landingfy-creator.com/backend/web/index.php?r=emails%2Fenvio',
+              url: 'https://alpesan-creator.com/backend/web/index.php?r=emails%2Fenvio',
               data: { id: ".Yii::$app->request->get('id').", email: $('#emailAdmin').val(), carbon: $('#ccAdmin').val() }
             })
             .done(function( msg ) {

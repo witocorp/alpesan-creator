@@ -7,7 +7,7 @@
 
 #Agafem els parametres
 usr="apache"
-dir="/var/www/landingfy-creator.com/landings/"
+dir="/var/www/alpesan-creator.com/landings/"
 domini=$1
 
 #Crear directori web
@@ -24,7 +24,7 @@ echo "#### $domini
     ServerAlias www.$domini
     DocumentRoot $dir$domini
     Redirect 301 / https://$domini/
-    Alias /assets /var/www/landingfy-creator.com/landings/assets
+    Alias /assets /var/www/alpesan-creator.com/landings/assets
 </VirtualHost>" > /etc/httpd/conf.d/$domini.conf
 
 #Activar ssl i reiniciar apache

@@ -68,7 +68,7 @@ if ($result->num_rows > 0) {
         $mail->IsHTML(true);
         $mail->Username = "fantasticfy@gmail.com";
         $mail->Password = "46Wito74.";
-        $mail->SetFrom("noreply@landingfy-creator.com");
+        $mail->SetFrom("noreply@alpesan-creator.com");
         $mail->AddStringAttachment($attachmentH. "" .$attachment2, 'landing_emails.xls', 'base64', 'application/vnd.ms-excel');
         $mail->Subject = "Emails list: " .$dominio;
         $mail->Body = "Emails list";
@@ -99,7 +99,7 @@ if($attachment  !== ''){
   $mail->IsHTML(true);
   $mail->Username = "fantasticfy@gmail.com";
   $mail->Password = "46Wito74.";
-  $mail->SetFrom("noreply@landingfy-creator.com");
+  $mail->SetFrom("noreply@alpesan-creator.com");
   $mail->AddStringAttachment($attachmentH. "" .$attachment, 'emails_list.xls', 'base64', 'application/vnd.ms-excel');
   $mail->Subject = "Emails list";
   $mail->Body = "Emails list";
