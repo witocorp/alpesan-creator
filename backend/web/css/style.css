@@ -9,6 +9,8 @@
  
 .box_third_menu {
   padding-top: 25px;
+  text-align: end;
+  padding-right: 2%;
 }
 .box_first_menu {
   padding-top: 15px;
@@ -104,11 +106,6 @@ header.container {
   display: block !important;
   margin-left: auto !important;
   margin-right: auto !important;
-}
-
-.box_third_menu {
-  text-align: end;
-  padding-right: 2%;
 }
 
 .right-position-landings {
