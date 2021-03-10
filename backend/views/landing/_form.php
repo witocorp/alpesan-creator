@@ -190,55 +190,10 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
         <div class="col-md-12 text-center banner_head">
           <p>93 000 00 00</p>
         </div>
-        <header>
-          <div class="container">
-            <nav class="navbar navbar-expand-lg">
-              <a class="navbar-brand" href="https://www.froala.com">
-                <img src="./imgs/logo.png" height="30" alt="image">
-              </a>
 
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav5" aria-controls="navbarNav5" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <div class="collapse navbar-collapse" id="navbarNav5">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="https://www.froala.com">Home <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://www.froala.com">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://www.froala.com">Pricing</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://www.froala.com">Team</a>
-                  </li>
-                </ul>
-
-                <ul class="navbar-nav justify-content-end ml-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://www.froala.com">Docs</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://www.froala.com">Contact</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="https://www.froala.com">Log In</a>
-                  </li>
-                </ul>
-
-                <a class="btn btn-primary ml-md-3" href="https://www.froala.com">Button</a>
-              </div>
-            </nav>
-          </div>
-        </header>
-
-
+        <a class="navbar-brand centrado" href="#"><img src="img/no-logo.jpg"></a>
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="img/no-logo.jpg"></a>
             <a class="btn btn-outline-danger d-sm-none" href="#">Commander</a>
             <a class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
               <div class="navbar-toggler-icon"></div>
