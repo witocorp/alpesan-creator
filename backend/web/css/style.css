@@ -101,9 +101,9 @@ header.container {
   margin-left: 1rem;
 }
 .centrado, .box_second_menu img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .right-position-landings {

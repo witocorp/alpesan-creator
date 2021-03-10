@@ -81,9 +81,9 @@ body {
   padding: 5px 20px;
 }
 .centrado, .box_second_menu img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 @media screen and (max-width: 992px) {
   .navbar-nav li {
