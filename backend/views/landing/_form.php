@@ -189,7 +189,7 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
         <div class="col-md-12 text-center banner_head">
           <p>93 000 00 00</p>
         </div>
-         <div class="col-4 box_first_menu">
+         <div class="col-4 col-sm-4 box_first_menu">
           <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
               <a class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -206,10 +206,10 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
             </div>
           </nav>  
         </div>
-        <div class="col-4 box_second_menu">
+        <div class="col-4 col-sm-4 box_second_menu">
           <a class="navbar-brand" href="#"><img src="img/no-logo.jpg" class="centrado"></a>
         </div>
-        <div class="col-4 box_third_menu">
+        <div class="col-4 col-sm-4 box_third_menu">
           <a class="btn btn-outline-danger" href="#">Commander</a>
         </div> 
       </div>
