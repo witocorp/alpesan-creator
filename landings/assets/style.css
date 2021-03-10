@@ -258,6 +258,11 @@ p[data-f-id="pbf"] {
     font-size: 3.5rem;
   }
 }
+@media (max-width: 991px) {
+  .box_third_menu {
+    padding-top: 3%;
+  }
+}
 
 .block-design {
   background-color: white;

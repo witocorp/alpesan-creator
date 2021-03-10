@@ -350,7 +350,11 @@ button {
 		margin: 2rem auto;	
 	}
 }
-
+@media (max-width: 991px) {
+  .box_third_menu {
+    padding-top: 3%;
+  }
+}
 .logo-alpesan {
   display: flex;
   margin-bottom: 3%;
