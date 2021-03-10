@@ -25,13 +25,12 @@ AppAsset::register($this);
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 	<link href="css/style.css" rel="stylesheet">
 	<script src="https://use.fontawesome.com/fa197de1b6.js"></script>
-	
 </head>
 <body>
 <?php $this->beginBody() ?>
 <header class="header">
 	<div class="container">
-	  <h3 class="float-md-start mb-0"><a href="/backend/web">Alpesan Creator<a/></h3>
+	  <h3 class="float-md-start mb-0"><a href="/backend/web">Landing Creator<a/></h3>
 	  <nav class="nav nav-masthead justify-content-center float-md-end">
 		<?php 
 			if (Yii::$app->user->isGuest) {
