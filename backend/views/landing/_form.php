@@ -190,8 +190,9 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
         <div class="col-md-12 text-center banner_head">
           <p>93 000 00 00</p>
         </div>
-
-        <a class="navbar-brand centrado" href="#"><img src="img/no-logo.jpg"></a>
+        <div class="col-md-12">
+          <a class="navbar-brand centrado" href="#"><img src="img/no-logo.jpg"></a>
+        </div>
         <nav class="navbar navbar-expand-lg navbar-light">
           <div class="container-fluid">
             <a class="btn btn-outline-danger d-sm-none" href="#">Commander</a>
