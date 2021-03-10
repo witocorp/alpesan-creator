@@ -30,7 +30,7 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 <header class="header">
 	<div class="container">
-	  <h3 class="float-md-start mb-0"><a href="/backend/web">Landing Creator<a/></h3>
+	  <h3 class="float-md-start mb-0"><a href="/backend/web">Alpesan Creator<a/></h3>
 	  <nav class="nav nav-masthead justify-content-center float-md-end">
 		<?php 
 			if (Yii::$app->user->isGuest) {
