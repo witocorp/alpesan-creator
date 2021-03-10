@@ -6,8 +6,9 @@ use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model backend\models\Landing */
 /* @var $form yii\widgets\ActiveForm */
+
 $this->registerCssFile("/path/to/your/file/in/web/folder/style.css");
-$this->registerCssFile("@web/editor/css/froala_editor.css" );
+$this->registerCssFile("@web/editor/css/froala_editor.css");
 $this->registerCssFile("@web/editor/css/froala_style.css");
 $this->registerCssFile("@web/editor/css/plugins/code_view.css");
 $this->registerCssFile("@web/editor/css/plugins/colors.css");
@@ -56,31 +57,31 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
 ?>
 <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-	<div class="modal-content">
-	  <div class="modal-header">
-		<h5 class="modal-title" id="exampleModalLabel">Image Library</h5>
-		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-	  </div>
-	  <div class="modal-body">
-		<form id="save_image" action="#" method="post" enctype="multipart/form-data">
-			<div class="mb-3">
-				<input class="form-control" type="file" id="img_library" name="image">
-			</div>
-			<button type="submit" class="btn btn-primary">
-			  <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload file
-			</button>
-		</form>
-		<div class="card_group row">
-			
-		</div>
-		</div>
-	  </div>
-	  <div class="modal-footer">
-		
-	  </div>
-	</div>
- </div>
- <div class="modal" id="CopyLink" tabindex="-1" aria-labelledby="CopyLink" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Image Library</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="save_image" action="#" method="post" enctype="multipart/form-data">
+          <div class="mb-3">
+            <input class="form-control" type="file" id="img_library" name="image">
+          </div>
+          <button type="submit" class="btn btn-primary">
+            <i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload file
+          </button>
+        </form>
+        <div class="card_group row">
+
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+
+    </div>
+  </div>
+</div>
+<div class="modal" id="CopyLink" tabindex="-1" aria-labelledby="CopyLink" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -89,458 +90,423 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
       </div>
     </div>
   </div>
- </div>
+</div>
 <input type="button" id="ver_codigo" value="Create landing" class="btn btn-success pull-right">
 <div class="landing-form">
-	<h3><i class="fa fa-cog" aria-hidden="true"></i> Options</h3>
-    <?php $form = ActiveForm::begin(); ?>
-	<div class="col-md-4"><i class="bi bi-align-bottom"></i>
-		<?= $form->field($model, 'titulo')->textInput(['maxlength' => true]); ?>
-	</div>
-	<div class="col-md-4">
-		<?= $form->field($model, 'dominio')->textInput(['maxlength' => true]); ?>
-	</div>
+  <h3><i class="fa fa-cog" aria-hidden="true"></i> Options</h3>
+  <?php $form = ActiveForm::begin(); ?>
+  <div class="col-md-4"><i class="bi bi-align-bottom"></i>
+    <?= $form->field($model, 'titulo')->textInput(['maxlength' => true]); ?>
+  </div>
+  <div class="col-md-4">
+    <?= $form->field($model, 'dominio')->textInput(['maxlength' => true]); ?>
+  </div>
   <div class="col-md-4">
     <?= $form->field($model, 'color')->textInput(['maxlength' => true]); ?>
   </div>
-	<div class="col-md-12">
-		<?= $form->field($model, 'descripcion')->textarea(['rows' => 3]); ?>
-	</div>
-    <?= $form->field($model, 'codigo')->hiddenInput()->label(false); ?>
-	<div class="text-center">
-    <input type="button" id="disena" value="Design landing" class="btn btn-info">  
+  <div class="col-md-12">
+    <?= $form->field($model, 'descripcion')->textarea(['rows' => 3]); ?>
   </div>
-	<div class="row" id="disena_div">
+  <?= $form->field($model, 'codigo')->hiddenInput()->label(false); ?>
+  <div class="text-center">
+    <input type="button" id="disena" value="Design landing" class="btn btn-info">
+  </div>
+  <div class="row" id="disena_div">
     <h3><i class="fa fa-code" aria-hidden="true"></i> Landing</h3>
-      <div class="col-md-2 left_dis">
-        <div class="sticky-top">
-          <h3 class="text-left marg_compo">Components</h3>
-		  <!-- Button trigger modal -->
-			<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-			  <i class="fa fa-picture-o" aria-hidden="true"></i> Image Library
-      </button>
-      <button type="button" class="btn btn-info my-md-3" data-bs-toggle="modal" data-bs-target="#legalModal">
-        <i class="fa fa-file-o" aria-hidden="true"></i> Legal Warning
-      <button type="button" class="btn btn-info my-md-3" data-bs-toggle="modal" data-bs-target="#cookiesModal">
-      <i class="fa fa-file-o" aria-hidden="true"></i> Política Cookies
-      <button type="button" class="btn btn-info my-md-3" data-bs-toggle="modal" data-bs-target="#privacidadModal">
-      <i class="fa fa-file-o" aria-hidden="true"></i> Política privacidad
-      <button type="button" class="btn btn-info my-md-3" data-bs-toggle="modal" data-bs-target="#garantiaModal">
-      <i class="fa fa-file-o" aria-hidden="true"></i> Garantía
-      <button type="button" class="btn btn-info my-md-3" data-bs-toggle="modal" data-bs-target="#ventaModal">
-      <i class="fa fa-file-o" aria-hidden="true"></i> Condiciones venta
+    <div class="col-md-2 left_dis">
+      <div class="sticky-top">
+        <h3 class="text-left marg_compo">Components</h3>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <i class="fa fa-picture-o" aria-hidden="true"></i> Image Library
+        </button>
+        <button type="button" class="btn btn-info my-md-3" data-bs-toggle="modal" data-bs-target="#legalModal">
+          <i class="fa fa-file-o" aria-hidden="true"></i> Legal Warning
+          <button type="button" class="btn btn-info my-md-3" data-bs-toggle="modal" data-bs-target="#cookiesModal">
+            <i class="fa fa-file-o" aria-hidden="true"></i> Política Cookies
+            <button type="button" class="btn btn-info my-md-3" data-bs-toggle="modal" data-bs-target="#privacidadModal">
+              <i class="fa fa-file-o" aria-hidden="true"></i> Política privacidad
+              <button type="button" class="btn btn-info my-md-3" data-bs-toggle="modal" data-bs-target="#garantiaModal">
+                <i class="fa fa-file-o" aria-hidden="true"></i> Garantía
+                <button type="button" class="btn btn-info my-md-3" data-bs-toggle="modal" data-bs-target="#ventaModal">
+                  <i class="fa fa-file-o" aria-hidden="true"></i> Condiciones venta
 
-			</button>
-          <h5 class="text-left my-md-3">Slide</h5>
-          <div class="text-left my-md-3">
-            <img src="img/slide.png" id="c1" class="img-responsive"/>
-          </div>
-          <div class="text-left my-md-3">
-            <img src="img/slide_2.png" id="c2" class="img-responsive"/>
-          </div>
-          <div class="text-left my-md-3">
-            <img src="img/slide_3.png" id="c3" class="img-responsive"/>
-          </div>
-          <h5 class="text-left my-md-3">Título</h5>
-          <div class="text-left my-md-3">
-            <img
-              src="img/titulo.png"
-              id="t1"
-              style="border: 1px solid; cursor: pointer" class="img-responsive"
-            />
-          </div>
-          <h5 class="text-left my-md-3">Contenido</h5>
-          <div class="text-left my-md-3">
-            <img
-              src="img/contenido.png"
-              id="cn1"
-              style="border: 1px solid; cursor: pointer" class="img-responsive"
-            />
-          </div>
-          <div class="text-left my-md-3">
-            <img
-              src="img/texto_doble.png"
-              id="cn2"
-              style="border: 1px solid; cursor: pointer" class="img-responsive"
-            />
-          </div>
-          <div class="text-left my-md-3">
-            <img
-              src="img/texto_imagen_1.png"
-              id="cn3"
-              style="border: 1px solid; cursor: pointer" class="img-responsive"
-            />
-          </div>
-          <div class="text-left my-md-3">
-            <img
-              src="img/texto_imagen_2.png"
-              id="cn4"
-              style="border: 1px solid; cursor: pointer" class="img-responsive"
-            />
-          </div>
-           <div class="text-left my-md-3">
-            <img
-              src="img/texto_imagen_3.png"
-              id="cn5"
-              style="border: 1px solid; cursor: pointer" class="img-responsive"
-            />
-          </div>
-          <div class="text-left my-md-3">
-            <img
-              src="img/c6.png"
-              id="cn6"
-              style="border: 1px solid; cursor: pointer" class="img-responsive"
-            />
-          </div>
-          <div class="text-left my-md-3">
-            <img
-              src="img/html_shopify.png"
-              id="cn7"
-              style="border: 1px solid; cursor: pointer" class="img-responsive"
-            />
-          </div>
-          <h5 class="text-left my-md-3 text-center">Contacto</h5>
-          <div class="text-left my-md-3">
-            <img
-              src="img/contacto.png"
-              id="cn8"
-              style="border: 1px solid; cursor: pointer" class="img-responsive"
-            />
-          </div>
-          <h5 class="text-left my-md-3">Title options</h5>
-          <div class="text-left my-md-3">
-            <input type="text" id="titleOptions" class="form-control" placeholder="Title">
-            <button type="button" id="addTitle" class="btn btn-primary centrado my-md-2">Add</button>
-          </div>
-          <h5 class="text-left my-md-3">Add option</h5>
-          <div class="text-left my-md-3">
-            <input type="text" id="newOption" class="form-control" placeholder="Option">
-            <input type="text" id="newValue" class="form-control my-md-2" placeholder="Value">
-            <button type="button" id="addOption" class="btn btn-primary centrado">Add</button>
-          </div>
-        </div>
+                </button>
+                <h5 class="text-left my-md-3">Slide</h5>
+                <div class="text-left my-md-3">
+                  <img src="img/slide.png" id="c1" class="img-responsive" />
+                </div>
+                <div class="text-left my-md-3">
+                  <img src="img/slide_2.png" id="c2" class="img-responsive" />
+                </div>
+                <div class="text-left my-md-3">
+                  <img src="img/slide_3.png" id="c3" class="img-responsive" />
+                </div>
+                <h5 class="text-left my-md-3">Título</h5>
+                <div class="text-left my-md-3">
+                  <img src="img/titulo.png" id="t1" style="border: 1px solid; cursor: pointer" class="img-responsive" />
+                </div>
+                <h5 class="text-left my-md-3">Contenido</h5>
+                <div class="text-left my-md-3">
+                  <img src="img/contenido.png" id="cn1" style="border: 1px solid; cursor: pointer" class="img-responsive" />
+                </div>
+                <div class="text-left my-md-3">
+                  <img src="img/texto_doble.png" id="cn2" style="border: 1px solid; cursor: pointer" class="img-responsive" />
+                </div>
+                <div class="text-left my-md-3">
+                  <img src="img/texto_imagen_1.png" id="cn3" style="border: 1px solid; cursor: pointer" class="img-responsive" />
+                </div>
+                <div class="text-left my-md-3">
+                  <img src="img/texto_imagen_2.png" id="cn4" style="border: 1px solid; cursor: pointer" class="img-responsive" />
+                </div>
+                <div class="text-left my-md-3">
+                  <img src="img/texto_imagen_3.png" id="cn5" style="border: 1px solid; cursor: pointer" class="img-responsive" />
+                </div>
+                <div class="text-left my-md-3">
+                  <img src="img/c6.png" id="cn6" style="border: 1px solid; cursor: pointer" class="img-responsive" />
+                </div>
+                <div class="text-left my-md-3">
+                  <img src="img/html_shopify.png" id="cn7" style="border: 1px solid; cursor: pointer" class="img-responsive" />
+                </div>
+                <h5 class="text-left my-md-3 text-center">Contacto</h5>
+                <div class="text-left my-md-3">
+                  <img src="img/contacto.png" id="cn8" style="border: 1px solid; cursor: pointer" class="img-responsive" />
+                </div>
+                <h5 class="text-left my-md-3">Title options</h5>
+                <div class="text-left my-md-3">
+                  <input type="text" id="titleOptions" class="form-control" placeholder="Title">
+                  <button type="button" id="addTitle" class="btn btn-primary centrado my-md-2">Add</button>
+                </div>
+                <h5 class="text-left my-md-3">Add option</h5>
+                <div class="text-left my-md-3">
+                  <input type="text" id="newOption" class="form-control" placeholder="Option">
+                  <input type="text" id="newValue" class="form-control my-md-2" placeholder="Value">
+                  <button type="button" id="addOption" class="btn btn-primary centrado">Add</button>
+                </div>
       </div>
-      <div class="col h-100 block-design" id="code_html">
-        <div id="editH">
+    </div>
+    <div class="col h-100 block-design" id="code_html">
+      <div id="editH">
         <div class="col-md-12 text-center banner_head">
           <p>93 000 00 00</p>
         </div>
-			<nav class="navbar navbar-expand-lg navbar-light">
-			  <div class="container-fluid">
-        <a class="btn btn-outline-danger d-sm-none" href="#">Commander</a>
-				<a class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-				  <div class="navbar-toggler-icon"></div>
-        </a>
-				<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-				  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<a href="#">Item</a>
-					<a href="#">Item</a>
-					<a href="#">Item</a>
-					<a href="#">Item</a>
-				  </ul>
-					<a class="btn btn-outline-danger d-none d-sm-block" href="#">Commander</a>
-				</div>
-        <a class="navbar-brand" href="#"><img src="img/no-logo.jpg"></a>
-			  </div>
-			</nav>
-        </div>
-        <main>
-          <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner"> 
-              <div class="carousel-item active"> 
-                <img src="https://cdn.shopify.com/s/files/1/0513/1747/3479/files/05-Banner-home-vibroflexPro_1512x.jpg?v=1608564639" class="bd-placeholder-img" width="100%" height="100%"> 
-                <div class="container"> 
-                  <div class="carousel-caption text-start"> 
-                    <h1>Example headline.</h1> 
-                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>  
-                  </div> 
-                </div> 
-              </div> 
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="img/no-logo.jpg"></a>
+            <a class="btn btn-outline-danger d-sm-none" href="#">Commander</a>
+            <a class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <div class="navbar-toggler-icon"></div>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <a href="#">Item</a>
+                <a href="#">Item</a>
+                <a href="#">Item</a>
+                <a href="#">Item</a>
+              </ul>
+              <a class="btn btn-outline-danger d-none d-sm-block" href="#">Commander</a>
             </div>
           </div>
-          <div id="anexos" class="column">
-
-          </div>
-        </main>
-        <footer id="editF">
-            <div class="container">
-                 <div class="row align-items-top">
-                  <div class="col-12 col-md-4 col-lg-4 ml-auto text-lg-left mt-4 mt-lg-0">
-                    <img src="img/no-logo.jpg" class="img-responsive mb-3">
-                    <p class="my-auto">© 2021. All Rights Reserved</p>
-                  </div>
-
-                  <div class="col-12 col-sm-12 col-md-8 col-lg-8 text-sm-left">
-                    <nav class="nav flex-column">
-                      <a class="nav-link active" href="#ventaModal">Conditions générales de vente</a>
-                      <a class="nav-link" href="#garantiaModal">Garantie</a>
-                      <a class="nav-link" href="#privacidadModal">Informations clients et données personnelles</a>
-                      <a class="nav-link" href="#cookiesModal">Informations sur les cookies et protection de la vie privée</a>
-                      <a class="nav-link" href="#legalModal">Mentions légales du site</a>
-                    </nav>
-                  </div>
+        </nav>
+      </div>
+      <main>
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://cdn.shopify.com/s/files/1/0513/1747/3479/files/05-Banner-home-vibroflexPro_1512x.jpg?v=1608564639" class="bd-placeholder-img" width="100%" height="100%">
+              <div class="container">
+                <div class="carousel-caption text-start">
+                  <h1>Example headline.</h1>
+                  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
                 </div>
+              </div>
             </div>
-        </footer>
-        <div class="modal" id="legalModal" tabindex="-1" aria-labelledby="legalModal" aria-hidden="true">
-          <div class="modal-dialog">
+          </div>
+        </div>
+        <div id="anexos" class="column">
+
+        </div>
+      </main>
+      <footer id="editF">
+        <div class="container">
+          <div class="row align-items-top">
+            <div class="col-12 col-md-4 col-lg-4 ml-auto text-lg-left mt-4 mt-lg-0">
+              <img src="img/no-logo.jpg" class="img-responsive mb-3">
+              <p class="my-auto">© 2021. All Rights Reserved</p>
+            </div>
+
+            <div class="col-12 col-sm-12 col-md-8 col-lg-8 text-sm-left">
+              <nav class="nav flex-column">
+                <a class="nav-link active" href="#ventaModal">Conditions générales de vente</a>
+                <a class="nav-link" href="#garantiaModal">Garantie</a>
+                <a class="nav-link" href="#privacidadModal">Informations clients et données personnelles</a>
+                <a class="nav-link" href="#cookiesModal">Informations sur les cookies et protection de la vie privée</a>
+                <a class="nav-link" href="#legalModal">Mentions légales du site</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="modal" id="legalModal" tabindex="-1" aria-labelledby="legalModal" aria-hidden="true">
+        <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              
+
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="editMb">
               <h2 class="modal-title text-center pb-2" id="legalModal">Mentions légales du site</h2>
-                <p><strong>1. Informations légales</strong>&nbsp;</p>
-                <p>Nom du site&nbsp;:&nbsp;http://vibroflex.fr/</p>
-                <p>Nom de l’éditeur du site&nbsp;: ELITE TRADE AG</p>
-                <p>Siège social&nbsp;: 40/54<br>AVENUE SAINTE MARGUERITE<br>06200 NICE</p>
-                <p>Nom du responsable de la publication&nbsp;: ELITE TRADE AG</p>
-                <p>Adresse postale de contact&nbsp;: ELITE TRADE AG</p>
-                <p>40/54<br>AVENUE SAINTE MARGUERITE<br>06200 NICE</p>
-                <p>Adresse courriel&nbsp;:<a href="mailto:info01.elitebienetre@gmail.com" aria-describedby="a11y-external-message">info01.elitebienetre@gmail.com</a></p>
-                <p>Hébergeur du site&nbsp;:</p>
-                <p><strong>2. Accès au site</strong></p>
-                <p>L'accès au site est réservé aux personnes majeures. L'éditeur se réserve le droit de demander toute justification de votre âge notamment si vous utilisez des services de commande en ligne.&nbsp;</p>
-                <p><strong>3. Contenu du site</strong></p>
-                <p>Toutes les marques, photographies, textes, commentaires, illustrations, images animées ou non, séquences vidéo, sons, ainsi que toutes les applications informatiques qui pourraient être utilisées pour faire fonctionner ce site et plus généralement tous les éléments reproduits ou utilisés sur le site sont protégés par les lois en vigueur au titre de la propriété intellectuelle.</p>
-                <p>Ils sont la propriété pleine et entière de l'éditeur ou de ses partenaires. Toute reproduction, représentation, utilisation ou adaptation, sous quelque forme que ce soit, de tout ou partie de ces éléments, y compris les applications informatiques, sans l'accord préalable et écrit de l'éditeur, sont strictement interdites. Le fait pour l'éditeur de ne pas engager de procédure dès la prise de connaissance de ces utilisations non autorisées ne vaut pas acceptation desdites utilisations et renonciation aux poursuites.&nbsp;</p>
-                <p>En ce qui concerne les services de commande en ligne, l'ensemble des informations présentes sur ce site sont valables pour la France métropolitaine (Corse incluse) exclusivement. Pour toute commande destinée à d'autres destinations, vous devez demander<span>&nbsp;</span><em>via</em><span>&nbsp;</span>l'adresse e-mail de l'éditeur ci-dessous, les informations nécessaires.&nbsp;</p>
-                <p><strong>4. Gestion du site</strong></p>
-                <p>Pour la bonne gestion du site, l'éditeur pourra à tout moment&nbsp;:</p>
-                <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; suspendre, interrompre ou de limiter l'accès à tout ou partie du site, réserver l'accès au site, ou à certaines parties du site, à une catégorie déterminée d'internaute&nbsp;;</p>
-                <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; supprimer toute information pouvant en perturber le fonctionnement ou entrant en contravention avec les lois nationales ou internationales, ou avec les règles de la Nétiquette&nbsp;;</p>
-                <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; suspendre le site afin de procéder à des mises à jour&nbsp;</p>
-                <p><strong>5. Responsabilité</strong></p>
-                <p>La responsabilité de l'éditeur ne peut être engagée en cas de défaillance, panne, difficulté ou interruption de fonctionnement, empêchant l'accès au site ou à une de ses fonctionnalités.</p>
-                <p>Le matériel de connexion au site que vous utilisez est sous votre entière responsabilité. Vous devez prendre toutes les mesures appropriées pour protéger votre matériel et vos propres données notamment d'attaques virales par Internet. Vous êtes par ailleurs le seul responsable des sites et données que vous consultez.</p>
-                <p>L'éditeur ne pourra être tenu responsable en cas de poursuites judiciaires à votre encontre :</p>
-                <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; du fait de l'usage du site ou de tout service accessible<span>&nbsp;</span><em>via</em><span>&nbsp;</span>Internet&nbsp;;</p>
-                <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; du fait du non-respect par vous des présentes conditions générales.</p>
-                <p>L'éditeur n'est pas responsable des dommages causés à vous-même, à des tiers et/ou à votre équipement du fait de votre connexion ou de votre utilisation du site et vous renoncez à toute action contre lui de ce fait.</p>
-                <p>Si l'éditeur venait à faire l'objet d'une procédure amiable ou judiciaire à raison de votre utilisation du site, il pourra retourner contre vous pour obtenir indemnisation de tous les préjudices, sommes, condamnations et frais qui pourraient découler de cette procédure.</p>
-                <p>&nbsp;</p>
-                <p><strong>6. Liens hypertextes</strong></p>
-                <p>La mise en place par vous de tous liens hypertextes vers tout ou partie du site est strictement interdite, sauf autorisation préalable et écrite de l'éditeur, sollicitée par courriel à l'adresse suivante :&nbsp;<a href="mailto:info01.elitebienetre@gmail.com" aria-describedby="a11y-external-message">info01.elitebienetre@gmail.com</a></p>
-                <p>L'éditeur est libre de refuser cette autorisation sans avoir à justifier de quelque manière que ce soit sa décision. Dans le cas où l'éditeur accorderait son autorisation, celle-ci n'est dans tous les cas que temporaire et pourra être retirée à tout moment, sans obligation de justification à la charge de l'éditeur.</p>
-                <p>Dans tous les cas, tout lien devra être retiré sur simple demande de l'éditeur.</p>
-                <p>Toute information accessible<span>&nbsp;</span><em>via</em><span>&nbsp;</span>un lien vers d'autres sites n'est pas sous le contrôle de l'éditeur qui décline toute responsabilité quant à leur contenu.</p>
-                <p>&nbsp;</p>
-                <p><strong>7. Collecte des données personnelles</strong></p>
-                <p>Voir page spécifique&nbsp;:&nbsp;https://vibroflex.myshopify.com/pages/informations-clients-et-donnees-personnelles</p>
-                <p><strong>8. Cookies</strong></p>
-                <p>Voir page spécifique&nbsp;:&nbsp;https://vibroflex.myshopify.com/pages/informations-clients-et-donnees-personnelles</p>
-                <p><strong>9. Photographies et représentation des produits</strong></p>
-                <p>Les photographies de produits, accompagnant leur description, ne sont pas contractuelles et n'engagent pas l'éditeur.</p>
-                <p>&nbsp;</p>
-                <p><strong>10. loi applicable</strong></p>
-                <p>Les présentes conditions d'utilisation du site sont régies par la loi française et le droit applicable est le droit français. La langue utilisée durant les relations précontractuelles et contractuelles est le français.</p>
-                <p>&nbsp;</p>
-                <p><strong>11. Réclamations et règlement amiable des litiges</strong></p>
-                <p>En vertu de l'article L. 152-1 du Code de la consommation " Tout consommateur a le droit de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable du litige qui l'oppose à un professionnel. "&nbsp;</p>
-                <p>Les litiges entrant dans le champ d'application de l'article L. 152-1 du Code de la consommation sont les litiges définis à l'article L. 151-1 du Code de la consommation à savoir les litiges de nature contractuelle, portant sur l'exécution d'un contrat de vente ou de fournitures de services, opposant un consommateur à un professionnel. Le texte couvre les litiges nationaux et les litiges transfrontaliers.</p>
-                <p>Pour toute difficulté, nous vous invitons à nous contacter préalablement ou à contacter notre service après-vente :&nbsp;</p>
-                <p>ELITE TRADE AG</p>
-                <p>40/54<br>AVENUE SAINTE MARGUERITE<br>06200 NICE</p>
-                <p><a href="mailto:info01.elitebienetre@gmail.com" aria-describedby="a11y-external-message">info01.elitebienetre@gmail.com</a></p>
-                <p>Service après-vente :</p>
-                <p>ELITE TRADE AG</p>
-                <p><a href="mailto:info01.elitebienetre@gmail.com" aria-describedby="a11y-external-message">info01.elitebienetre@gmail.com</a></p>
-                <p>Une plateforme de règlement des litiges en ligne est à votre disposition : &nbsp;</p>
-                <p>Centre européen des consommateurs France :&nbsp;</p>
-                <p><a href="http://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" aria-describedby="a11y-new-window-external-message">http://ec.europa.eu/consumers/odr/</a><span>.</span><span>&nbsp;</span></p>
-                <p>Seules les réclamations relatives à la Vente en Ligne des Articles seront prises en compte.&nbsp;</p>
-                <p>Dans l'année qui suivra votre demande auprès de nos services, en application de l'article R.156-1 du Code de la consommation, vous pourrez faire examiner votre demande par un médiateur dont trouverez ci-dessous les coordonnées, sachant qu'un litige ne pourra être examiné, sauf exception, que par un seul médiateur :&nbsp;</p>
-                <p><em>Médiateur du commercer coopératif et associé</em></p>
-                <p><em>http://www.mcca-mediation.fr</em>&nbsp;</p>
-                <p>Litiges transfrontaliers :&nbsp;</p>
-                <p>Centre européen des consommateurs France :&nbsp;</p>
-                <p>europe-consommateurs.eu</p>
-                <p>&nbsp;Vous pouvez, à vos frais, vous faire assister par un conseil.&nbsp;</p>
-                <p>&nbsp;</p>
-                <p><strong>12. Contactez-nous</strong></p>
-                <p>Pour toute question, information sur les produits présentés sur le site, ou concernant le site lui-même, vous pouvez laisser un message à l'adresse suivante&nbsp;:&nbsp;<a href="mailto:info01.elitebienetre@gmail.com" aria-describedby="a11y-external-message">info01.elitebienetre@gmail.com</a></p>
-            
-            </div>
-            </div>
-            <div class="modal-footer">
-            
+              <p><strong>1. Informations légales</strong>&nbsp;</p>
+              <p>Nom du site&nbsp;:&nbsp;http://vibroflex.fr/</p>
+              <p>Nom de l’éditeur du site&nbsp;: ELITE TRADE AG</p>
+              <p>Siège social&nbsp;: 40/54<br>AVENUE SAINTE MARGUERITE<br>06200 NICE</p>
+              <p>Nom du responsable de la publication&nbsp;: ELITE TRADE AG</p>
+              <p>Adresse postale de contact&nbsp;: ELITE TRADE AG</p>
+              <p>40/54<br>AVENUE SAINTE MARGUERITE<br>06200 NICE</p>
+              <p>Adresse courriel&nbsp;:<a href="mailto:info01.elitebienetre@gmail.com" aria-describedby="a11y-external-message">info01.elitebienetre@gmail.com</a></p>
+              <p>Hébergeur du site&nbsp;:</p>
+              <p><strong>2. Accès au site</strong></p>
+              <p>L'accès au site est réservé aux personnes majeures. L'éditeur se réserve le droit de demander toute justification de votre âge notamment si vous utilisez des services de commande en ligne.&nbsp;</p>
+              <p><strong>3. Contenu du site</strong></p>
+              <p>Toutes les marques, photographies, textes, commentaires, illustrations, images animées ou non, séquences vidéo, sons, ainsi que toutes les applications informatiques qui pourraient être utilisées pour faire fonctionner ce site et plus généralement tous les éléments reproduits ou utilisés sur le site sont protégés par les lois en vigueur au titre de la propriété intellectuelle.</p>
+              <p>Ils sont la propriété pleine et entière de l'éditeur ou de ses partenaires. Toute reproduction, représentation, utilisation ou adaptation, sous quelque forme que ce soit, de tout ou partie de ces éléments, y compris les applications informatiques, sans l'accord préalable et écrit de l'éditeur, sont strictement interdites. Le fait pour l'éditeur de ne pas engager de procédure dès la prise de connaissance de ces utilisations non autorisées ne vaut pas acceptation desdites utilisations et renonciation aux poursuites.&nbsp;</p>
+              <p>En ce qui concerne les services de commande en ligne, l'ensemble des informations présentes sur ce site sont valables pour la France métropolitaine (Corse incluse) exclusivement. Pour toute commande destinée à d'autres destinations, vous devez demander<span>&nbsp;</span><em>via</em><span>&nbsp;</span>l'adresse e-mail de l'éditeur ci-dessous, les informations nécessaires.&nbsp;</p>
+              <p><strong>4. Gestion du site</strong></p>
+              <p>Pour la bonne gestion du site, l'éditeur pourra à tout moment&nbsp;:</p>
+              <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; suspendre, interrompre ou de limiter l'accès à tout ou partie du site, réserver l'accès au site, ou à certaines parties du site, à une catégorie déterminée d'internaute&nbsp;;</p>
+              <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; supprimer toute information pouvant en perturber le fonctionnement ou entrant en contravention avec les lois nationales ou internationales, ou avec les règles de la Nétiquette&nbsp;;</p>
+              <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; suspendre le site afin de procéder à des mises à jour&nbsp;</p>
+              <p><strong>5. Responsabilité</strong></p>
+              <p>La responsabilité de l'éditeur ne peut être engagée en cas de défaillance, panne, difficulté ou interruption de fonctionnement, empêchant l'accès au site ou à une de ses fonctionnalités.</p>
+              <p>Le matériel de connexion au site que vous utilisez est sous votre entière responsabilité. Vous devez prendre toutes les mesures appropriées pour protéger votre matériel et vos propres données notamment d'attaques virales par Internet. Vous êtes par ailleurs le seul responsable des sites et données que vous consultez.</p>
+              <p>L'éditeur ne pourra être tenu responsable en cas de poursuites judiciaires à votre encontre :</p>
+              <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; du fait de l'usage du site ou de tout service accessible<span>&nbsp;</span><em>via</em><span>&nbsp;</span>Internet&nbsp;;</p>
+              <p>-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; du fait du non-respect par vous des présentes conditions générales.</p>
+              <p>L'éditeur n'est pas responsable des dommages causés à vous-même, à des tiers et/ou à votre équipement du fait de votre connexion ou de votre utilisation du site et vous renoncez à toute action contre lui de ce fait.</p>
+              <p>Si l'éditeur venait à faire l'objet d'une procédure amiable ou judiciaire à raison de votre utilisation du site, il pourra retourner contre vous pour obtenir indemnisation de tous les préjudices, sommes, condamnations et frais qui pourraient découler de cette procédure.</p>
+              <p>&nbsp;</p>
+              <p><strong>6. Liens hypertextes</strong></p>
+              <p>La mise en place par vous de tous liens hypertextes vers tout ou partie du site est strictement interdite, sauf autorisation préalable et écrite de l'éditeur, sollicitée par courriel à l'adresse suivante :&nbsp;<a href="mailto:info01.elitebienetre@gmail.com" aria-describedby="a11y-external-message">info01.elitebienetre@gmail.com</a></p>
+              <p>L'éditeur est libre de refuser cette autorisation sans avoir à justifier de quelque manière que ce soit sa décision. Dans le cas où l'éditeur accorderait son autorisation, celle-ci n'est dans tous les cas que temporaire et pourra être retirée à tout moment, sans obligation de justification à la charge de l'éditeur.</p>
+              <p>Dans tous les cas, tout lien devra être retiré sur simple demande de l'éditeur.</p>
+              <p>Toute information accessible<span>&nbsp;</span><em>via</em><span>&nbsp;</span>un lien vers d'autres sites n'est pas sous le contrôle de l'éditeur qui décline toute responsabilité quant à leur contenu.</p>
+              <p>&nbsp;</p>
+              <p><strong>7. Collecte des données personnelles</strong></p>
+              <p>Voir page spécifique&nbsp;:&nbsp;https://vibroflex.myshopify.com/pages/informations-clients-et-donnees-personnelles</p>
+              <p><strong>8. Cookies</strong></p>
+              <p>Voir page spécifique&nbsp;:&nbsp;https://vibroflex.myshopify.com/pages/informations-clients-et-donnees-personnelles</p>
+              <p><strong>9. Photographies et représentation des produits</strong></p>
+              <p>Les photographies de produits, accompagnant leur description, ne sont pas contractuelles et n'engagent pas l'éditeur.</p>
+              <p>&nbsp;</p>
+              <p><strong>10. loi applicable</strong></p>
+              <p>Les présentes conditions d'utilisation du site sont régies par la loi française et le droit applicable est le droit français. La langue utilisée durant les relations précontractuelles et contractuelles est le français.</p>
+              <p>&nbsp;</p>
+              <p><strong>11. Réclamations et règlement amiable des litiges</strong></p>
+              <p>En vertu de l'article L. 152-1 du Code de la consommation " Tout consommateur a le droit de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable du litige qui l'oppose à un professionnel. "&nbsp;</p>
+              <p>Les litiges entrant dans le champ d'application de l'article L. 152-1 du Code de la consommation sont les litiges définis à l'article L. 151-1 du Code de la consommation à savoir les litiges de nature contractuelle, portant sur l'exécution d'un contrat de vente ou de fournitures de services, opposant un consommateur à un professionnel. Le texte couvre les litiges nationaux et les litiges transfrontaliers.</p>
+              <p>Pour toute difficulté, nous vous invitons à nous contacter préalablement ou à contacter notre service après-vente :&nbsp;</p>
+              <p>ELITE TRADE AG</p>
+              <p>40/54<br>AVENUE SAINTE MARGUERITE<br>06200 NICE</p>
+              <p><a href="mailto:info01.elitebienetre@gmail.com" aria-describedby="a11y-external-message">info01.elitebienetre@gmail.com</a></p>
+              <p>Service après-vente :</p>
+              <p>ELITE TRADE AG</p>
+              <p><a href="mailto:info01.elitebienetre@gmail.com" aria-describedby="a11y-external-message">info01.elitebienetre@gmail.com</a></p>
+              <p>Une plateforme de règlement des litiges en ligne est à votre disposition : &nbsp;</p>
+              <p>Centre européen des consommateurs France :&nbsp;</p>
+              <p><a href="http://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" aria-describedby="a11y-new-window-external-message">http://ec.europa.eu/consumers/odr/</a><span>.</span><span>&nbsp;</span></p>
+              <p>Seules les réclamations relatives à la Vente en Ligne des Articles seront prises en compte.&nbsp;</p>
+              <p>Dans l'année qui suivra votre demande auprès de nos services, en application de l'article R.156-1 du Code de la consommation, vous pourrez faire examiner votre demande par un médiateur dont trouverez ci-dessous les coordonnées, sachant qu'un litige ne pourra être examiné, sauf exception, que par un seul médiateur :&nbsp;</p>
+              <p><em>Médiateur du commercer coopératif et associé</em></p>
+              <p><em>http://www.mcca-mediation.fr</em>&nbsp;</p>
+              <p>Litiges transfrontaliers :&nbsp;</p>
+              <p>Centre européen des consommateurs France :&nbsp;</p>
+              <p>europe-consommateurs.eu</p>
+              <p>&nbsp;Vous pouvez, à vos frais, vous faire assister par un conseil.&nbsp;</p>
+              <p>&nbsp;</p>
+              <p><strong>12. Contactez-nous</strong></p>
+              <p>Pour toute question, information sur les produits présentés sur le site, ou concernant le site lui-même, vous pouvez laisser un message à l'adresse suivante&nbsp;:&nbsp;<a href="mailto:info01.elitebienetre@gmail.com" aria-describedby="a11y-external-message">info01.elitebienetre@gmail.com</a></p>
+
             </div>
           </div>
-         </div>
+          <div class="modal-footer">
+
+          </div>
+        </div>
+      </div>
       <div class="modal" id="cookiesModal" tabindex="-1" aria-labelledby="cookiesModal" aria-hidden="true">
-          <div class="modal-dialog">
+        <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              
+
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="editMb1">
               <h2 class="modal-title text-center pb-2" id="cookiesModal">Informations sur les cookies et protection de la vie privée</h2>
               <p>
-                <p>La présente page est dédiée à la politique de protection de vie privée mise en œuvre par&nbsp;ELITE TRADE AG</p>
-                <p>La présente information complète celles relative aux données personnelles, établie conformément à la la loi n°78-17 du 16 janvier 1978 dite «&nbsp;Informatique et Libertés&nbsp;», disponible sous lien&nbsp;:</p>
-                <p>https://vibroflex.myshopify.com/pages/informations-clients-et-donnees-personnelles</p>
-                <p>COLLECTE DE DONNEES PAR&nbsp;http://vibroflex.fr/</p>
-                <p><strong>A quoi servent vos données&nbsp;?</strong></p>
-                <p>Comme indiqué sur la page&nbsp;https://vibroflex.myshopify.com/pages/informations-clients-et-donnees-personnelles, les données collectées en vue de traitement informatique sont utilisées afin de permettre la gestion du compte utilisateur</p>
-                <p>&nbsp;</p>
-                <p><strong>A qui sont destinées vos données&nbsp;?</strong></p>
-                <p>Les données collectées sur ce site sont à destination de la société ELITE TRADE AG , en sa qualité de responsable de traitement.<strong>&nbsp;</strong></p>
-                <p><strong>Comment sont protégées vos données&nbsp;?</strong></p>
-                <p>http://vibroflex.fr&nbsp;prend toutes les précautions pour préserver la sécurité de vos données afin, notamment, d’empêcher leur divulgation à des tiers non-autorisés. A ce titre&nbsp;http://vibroflex.fr met en place toutes les mesures nécessaires pour la sécurisation de ses dispositifs informatiques. Dans l’hypothèse où vos données font l’objet du transfert auprès de sous-traitants (notamment pour leur hébergement), http://vibroflex.fr/&nbsp;veille à ce que ces derniers présentent un niveau de sécurité conforme aux standards requis.&nbsp;</p>
-                <p><strong>Quels sont vos droits&nbsp;?</strong></p>
-                <p><strong></strong>Conformément aux dispositions des articles 38 et suivants de la loi du 6 Janvier 1978 dite «&nbsp;Informatique et Libertés&nbsp;», vous disposez d’un droit d’accès, de rectification et d’opposition aux traitement de données.</p>
-                <p>Pour en connaitre les modalités, rendez-vous sur la page INFORMATIONS CLIENT ET DONNEES PERSONNELLE&nbsp;:&nbsp;https://vibroflex.myshopify.com/pages/informations-clients-et-donnees-personnelles</p>
-                <p>&nbsp;</p>
-                <p>ENREGISTREMENT DE DONNEES AU MOYEN DE COOKIES</p>
-                <p>&nbsp;<strong>Qu’est-ce qu’un cookie&nbsp;?</strong></p>
-                <p>Lorsque vous consultez un site Internet, l’éditeur du site peut être amené à déposer un fichier texte sur votre ordinateur. Ce fichier est déposé par l’utilisation de votre logiciel de navigation&nbsp;: c’est ce fichier qui est appelé «&nbsp;cookie&nbsp;». Les informations stockées relatives à votre navigation sur notre site internet (http://vibroflex.fr/) concernent notamment les paramètres de langue, le temps de connexion, pages visitées,</p>
-                <p>Toutes les informations collectées indirectement ne seront utilisées que pour suivre le volume, le type et la configuration du trafic utilisant le site<span>&nbsp;http://vibroflex.fr/</span>, pour en développer la conception et l'agencement et à d'autres fins administratives et de planification et plus généralement pour améliorer le service que nous vous offrons.</p>
-                <p>Nous attirons votre attention sur le fait que le partage de l’utilisation de votre terminal avec d’autres personnes est susceptible de modifier le caractère personnalisé de l’action des cookies.&nbsp;</p>
-                <p><strong>Quels sont les types de cookies utilisés par http://vibroflex.fr/&nbsp;?</strong></p>
-                <p>http://vibroflex.fr utilise des&nbsp;«&nbsp;cookies&nbsp;» visant à faciliter votre navigation. Il s’agit notamment des cookies suivants&nbsp;:</p>
-                <ul>
+              <p>La présente page est dédiée à la politique de protection de vie privée mise en œuvre par&nbsp;ELITE TRADE AG</p>
+              <p>La présente information complète celles relative aux données personnelles, établie conformément à la la loi n°78-17 du 16 janvier 1978 dite «&nbsp;Informatique et Libertés&nbsp;», disponible sous lien&nbsp;:</p>
+              <p>https://vibroflex.myshopify.com/pages/informations-clients-et-donnees-personnelles</p>
+              <p>COLLECTE DE DONNEES PAR&nbsp;http://vibroflex.fr/</p>
+              <p><strong>A quoi servent vos données&nbsp;?</strong></p>
+              <p>Comme indiqué sur la page&nbsp;https://vibroflex.myshopify.com/pages/informations-clients-et-donnees-personnelles, les données collectées en vue de traitement informatique sont utilisées afin de permettre la gestion du compte utilisateur</p>
+              <p>&nbsp;</p>
+              <p><strong>A qui sont destinées vos données&nbsp;?</strong></p>
+              <p>Les données collectées sur ce site sont à destination de la société ELITE TRADE AG , en sa qualité de responsable de traitement.<strong>&nbsp;</strong></p>
+              <p><strong>Comment sont protégées vos données&nbsp;?</strong></p>
+              <p>http://vibroflex.fr&nbsp;prend toutes les précautions pour préserver la sécurité de vos données afin, notamment, d’empêcher leur divulgation à des tiers non-autorisés. A ce titre&nbsp;http://vibroflex.fr met en place toutes les mesures nécessaires pour la sécurisation de ses dispositifs informatiques. Dans l’hypothèse où vos données font l’objet du transfert auprès de sous-traitants (notamment pour leur hébergement), http://vibroflex.fr/&nbsp;veille à ce que ces derniers présentent un niveau de sécurité conforme aux standards requis.&nbsp;</p>
+              <p><strong>Quels sont vos droits&nbsp;?</strong></p>
+              <p><strong></strong>Conformément aux dispositions des articles 38 et suivants de la loi du 6 Janvier 1978 dite «&nbsp;Informatique et Libertés&nbsp;», vous disposez d’un droit d’accès, de rectification et d’opposition aux traitement de données.</p>
+              <p>Pour en connaitre les modalités, rendez-vous sur la page INFORMATIONS CLIENT ET DONNEES PERSONNELLE&nbsp;:&nbsp;https://vibroflex.myshopify.com/pages/informations-clients-et-donnees-personnelles</p>
+              <p>&nbsp;</p>
+              <p>ENREGISTREMENT DE DONNEES AU MOYEN DE COOKIES</p>
+              <p>&nbsp;<strong>Qu’est-ce qu’un cookie&nbsp;?</strong></p>
+              <p>Lorsque vous consultez un site Internet, l’éditeur du site peut être amené à déposer un fichier texte sur votre ordinateur. Ce fichier est déposé par l’utilisation de votre logiciel de navigation&nbsp;: c’est ce fichier qui est appelé «&nbsp;cookie&nbsp;». Les informations stockées relatives à votre navigation sur notre site internet (http://vibroflex.fr/) concernent notamment les paramètres de langue, le temps de connexion, pages visitées,</p>
+              <p>Toutes les informations collectées indirectement ne seront utilisées que pour suivre le volume, le type et la configuration du trafic utilisant le site<span>&nbsp;http://vibroflex.fr/</span>, pour en développer la conception et l'agencement et à d'autres fins administratives et de planification et plus généralement pour améliorer le service que nous vous offrons.</p>
+              <p>Nous attirons votre attention sur le fait que le partage de l’utilisation de votre terminal avec d’autres personnes est susceptible de modifier le caractère personnalisé de l’action des cookies.&nbsp;</p>
+              <p><strong>Quels sont les types de cookies utilisés par http://vibroflex.fr/&nbsp;?</strong></p>
+              <p>http://vibroflex.fr utilise des&nbsp;«&nbsp;cookies&nbsp;» visant à faciliter votre navigation. Il s’agit notamment des cookies suivants&nbsp;:</p>
+              <ul>
                 <li>les cookies utilisés comme «&nbsp;panier d’achat&nbsp;»</li>
                 <li>les cookies de «&nbsp;session utilisateur&nbsp;» (SessionID)</li>
                 <li>les cookies ayant pour finalité d’enregistrer la langue de l’utilisateur pour faciliter sa navigation</li>
                 <li>les cookies flash contenant des éléments strictement nécessaires pour faire fonctionner un lecteur de média (audio ou vidéo) correspondant à un contenu demandé par l’utilisateur.</li>
-                </ul>
-                <p>&nbsp;</p>
-                <p>http://vibroflex.fr peut également être amené à utiliser les cookies ayant pour finalité de nous renseigner sur les produits, services et pages que vous consultez. Ces cookies nous permettent de vous proposer un contenu personnalisé et notamment d’afficher lors de votre connexion sur notre site des publicités ciblées en rapport avec vos attentes.</p>
-                <p>Ces cookies peuvent être paramétrés selon vos choix, tels que décrits dans la section ci-dessous. En cas de refus des cookies nous permettant d’identifier les produits, services et pages que vous consultez, le contenu de votre navigation ne sera pas personnalisé et les publicités affichées pourront être sans intérêt pour vous.</p>
-                <p>&nbsp;</p>
-                <p><strong>http://vibroflex.fr permet-il à des tiers d’utiliser des Cookies lors de ma navigation&nbsp;?</strong></p>
-                <p>Le site<span>&nbsp;http://vibroflex.fr/</span><span>&nbsp;</span>utilise Google Analytics™, un service d’analyse de site internet fourni par Google Inc. Google Analytics utilise des cookies, qui sont des fichiers texte placés sur votre terminal, pour aider le site internet à analyser l’utilisation du site par ses utilisateurs et à réaliser des statistiques. Les données générées par les cookies concernant votre utilisation du site (y compris votre adresse IP à sont transmises et stockées par Google sur des serveurs situés aux Etats-Unis. Google utilisera cette information dans le but d’évaluer votre utilisation du site, de compiler des rapports sur l’activité du site à destination de son éditeur et de fournir d’autres services relatifs à l’activité du site et à l’utilisation d’internet. Google est susceptible de communiquer ces données à des tiers en cas d’obligation légale ou lorsque ces tiers traitent ces données pour le compte de Google, notamment l’éditeur de ce site. Google ne recoupera pas votre adresse IP avec toute autre donnée détenue par Google. Vous pouvez désactiver l’utilisation de cookies en sélectionnant les paramètres appropriés de votre navigateur (cf.ci-dessous). Cependant, une telle désactivation pourrait empêcher l’utilisation de certaines fonctionnalités de ce site. En utilisant ce site internet, vous consentez expressément au traitement de vos données nominatives par Google dans les conditions et pour les finalités décrites ci-dessus. Pour consulter les Règles de confidentialité Google&nbsp;<a href="http://www.google.com/intl/fr/policies/privacy/" aria-describedby="a11y-external-message">cliquez ici</a>.</p>
-                <p>Google a adhéré aux principes relatifs à la protection des données «&nbsp;Safe Harbor Privacy&nbsp;Principles&nbsp;» établies par le département du Commerce américain. Ces principes, négociés entre les autorités américaines et la Commission européenne en 2001, sont essentiellement basés sur ceux de la Directive 95/46 du 24 octobre 1995 et assurent une protection adéquate pour les transferts de données en provenance de l’Union européenne vers des entreprises établies aux Etats-Unis.</p>
-                <p>&nbsp;</p>
-                <p><strong>Comment exercer votre choix concernant les cookies&nbsp;?</strong></p>
-                <p>Paramètres du navigateur et conséquences de vos choix&nbsp;:</p>
-                <p>Plusieurs possibilités vous sont offertes pour gérer les cookies. A tout moment, vous pouvez exprimer et modifier vos souhaits en matière de cookies, via la section&nbsp;<strong>Aide&nbsp;</strong>de la barre d’outils de votre navigateur, Celle-ci vous indique comment refuser les nouveaux «&nbsp;cookies&nbsp;» ou obtenir un message qui vous signale leur réception ou encore comment désactiver les «&nbsp;cookies&nbsp;» soit systématiquement, soit selon leur émetteur. Vous pouvez également effacer les cookies manuellement.</p>
-                <p>Vous pouvez aussi choisir de désactiver ou de supprimer des données similaires utilisées par des logiciels accessoires à votre navigateur, tels que les Flash cookies, en modifiant les paramètres de ces logiciels ou en visitant le site Internet de l’éditeur de ces logiciels.&nbsp;</p>
-                <p>Attention, il est possible que cette configuration de votre navigateur vous empêche l’accès à certains contenus ou perturbe significativement votre navigation et les services que vous attendez de la part de notre site.</p>
-                <p>Dans pareille hypothèse, ELITE TRADE AG&nbsp;décline toute responsabilité concernant les conséquences liées au comportement dégradé du site<span>&nbsp;http://vibroflex.fr/</span><span>&nbsp;</span>résultant de l’impossibilité d’utiliser les cookies nécessaires à son fonctionnement.</p>
-                <p>&nbsp;</p>
-                <p><strong>Choix selon navigateur internet&nbsp;:</strong></p>
-                <p>Pour la gestion des cookies, chaque navigateur propose un process différent de configuration. Il est décrit dans le menu d’ «&nbsp;aide&nbsp;» de votre navigateur, qui vous permettra de savoir comment exprimer vos choix concernant les cookies&nbsp;:</p>
-                <ul>
+              </ul>
+              <p>&nbsp;</p>
+              <p>http://vibroflex.fr peut également être amené à utiliser les cookies ayant pour finalité de nous renseigner sur les produits, services et pages que vous consultez. Ces cookies nous permettent de vous proposer un contenu personnalisé et notamment d’afficher lors de votre connexion sur notre site des publicités ciblées en rapport avec vos attentes.</p>
+              <p>Ces cookies peuvent être paramétrés selon vos choix, tels que décrits dans la section ci-dessous. En cas de refus des cookies nous permettant d’identifier les produits, services et pages que vous consultez, le contenu de votre navigation ne sera pas personnalisé et les publicités affichées pourront être sans intérêt pour vous.</p>
+              <p>&nbsp;</p>
+              <p><strong>http://vibroflex.fr permet-il à des tiers d’utiliser des Cookies lors de ma navigation&nbsp;?</strong></p>
+              <p>Le site<span>&nbsp;http://vibroflex.fr/</span><span>&nbsp;</span>utilise Google Analytics™, un service d’analyse de site internet fourni par Google Inc. Google Analytics utilise des cookies, qui sont des fichiers texte placés sur votre terminal, pour aider le site internet à analyser l’utilisation du site par ses utilisateurs et à réaliser des statistiques. Les données générées par les cookies concernant votre utilisation du site (y compris votre adresse IP à sont transmises et stockées par Google sur des serveurs situés aux Etats-Unis. Google utilisera cette information dans le but d’évaluer votre utilisation du site, de compiler des rapports sur l’activité du site à destination de son éditeur et de fournir d’autres services relatifs à l’activité du site et à l’utilisation d’internet. Google est susceptible de communiquer ces données à des tiers en cas d’obligation légale ou lorsque ces tiers traitent ces données pour le compte de Google, notamment l’éditeur de ce site. Google ne recoupera pas votre adresse IP avec toute autre donnée détenue par Google. Vous pouvez désactiver l’utilisation de cookies en sélectionnant les paramètres appropriés de votre navigateur (cf.ci-dessous). Cependant, une telle désactivation pourrait empêcher l’utilisation de certaines fonctionnalités de ce site. En utilisant ce site internet, vous consentez expressément au traitement de vos données nominatives par Google dans les conditions et pour les finalités décrites ci-dessus. Pour consulter les Règles de confidentialité Google&nbsp;<a href="http://www.google.com/intl/fr/policies/privacy/" aria-describedby="a11y-external-message">cliquez ici</a>.</p>
+              <p>Google a adhéré aux principes relatifs à la protection des données «&nbsp;Safe Harbor Privacy&nbsp;Principles&nbsp;» établies par le département du Commerce américain. Ces principes, négociés entre les autorités américaines et la Commission européenne en 2001, sont essentiellement basés sur ceux de la Directive 95/46 du 24 octobre 1995 et assurent une protection adéquate pour les transferts de données en provenance de l’Union européenne vers des entreprises établies aux Etats-Unis.</p>
+              <p>&nbsp;</p>
+              <p><strong>Comment exercer votre choix concernant les cookies&nbsp;?</strong></p>
+              <p>Paramètres du navigateur et conséquences de vos choix&nbsp;:</p>
+              <p>Plusieurs possibilités vous sont offertes pour gérer les cookies. A tout moment, vous pouvez exprimer et modifier vos souhaits en matière de cookies, via la section&nbsp;<strong>Aide&nbsp;</strong>de la barre d’outils de votre navigateur, Celle-ci vous indique comment refuser les nouveaux «&nbsp;cookies&nbsp;» ou obtenir un message qui vous signale leur réception ou encore comment désactiver les «&nbsp;cookies&nbsp;» soit systématiquement, soit selon leur émetteur. Vous pouvez également effacer les cookies manuellement.</p>
+              <p>Vous pouvez aussi choisir de désactiver ou de supprimer des données similaires utilisées par des logiciels accessoires à votre navigateur, tels que les Flash cookies, en modifiant les paramètres de ces logiciels ou en visitant le site Internet de l’éditeur de ces logiciels.&nbsp;</p>
+              <p>Attention, il est possible que cette configuration de votre navigateur vous empêche l’accès à certains contenus ou perturbe significativement votre navigation et les services que vous attendez de la part de notre site.</p>
+              <p>Dans pareille hypothèse, ELITE TRADE AG&nbsp;décline toute responsabilité concernant les conséquences liées au comportement dégradé du site<span>&nbsp;http://vibroflex.fr/</span><span>&nbsp;</span>résultant de l’impossibilité d’utiliser les cookies nécessaires à son fonctionnement.</p>
+              <p>&nbsp;</p>
+              <p><strong>Choix selon navigateur internet&nbsp;:</strong></p>
+              <p>Pour la gestion des cookies, chaque navigateur propose un process différent de configuration. Il est décrit dans le menu d’ «&nbsp;aide&nbsp;» de votre navigateur, qui vous permettra de savoir comment exprimer vos choix concernant les cookies&nbsp;:</p>
+              <ul>
                 <li>
-                <strong>Pour Internet Explorer™</strong>&nbsp;: ouvrez le menu «&nbsp;Outils&nbsp;», puis sélectionnez «&nbsp;Options Internet&nbsp;»&nbsp;; cliquez sur l’onglet «&nbsp;Confidentialité&nbsp;» puis l’onglet «&nbsp;Avancé&nbsp;» choisissez le niveau souhaité ou suivez&nbsp;<a href="http://windows.microsoft.com/fr-fr/windows-vista/block-or-allow-cookies" aria-describedby="a11y-external-message">ce lien</a>
+                  <strong>Pour Internet Explorer™</strong>&nbsp;: ouvrez le menu «&nbsp;Outils&nbsp;», puis sélectionnez «&nbsp;Options Internet&nbsp;»&nbsp;; cliquez sur l’onglet «&nbsp;Confidentialité&nbsp;» puis l’onglet «&nbsp;Avancé&nbsp;» choisissez le niveau souhaité ou suivez&nbsp;<a href="http://windows.microsoft.com/fr-fr/windows-vista/block-or-allow-cookies" aria-describedby="a11y-external-message">ce lien</a>
                 </li>
                 <li>
-                <strong>Pour Firefox™&nbsp;</strong>: ouvrez le menu «&nbsp;Outils&nbsp;», puis sélectionnez «&nbsp;Options&nbsp;»&nbsp;; cliquiez sur l’onglet «&nbsp;Vie privée&nbsp;» puis choisissez les options souhaitées ou suivez&nbsp;<a href="https://support.mozilla.org/fr/kb/activer-desactiver-cookies" aria-describedby="a11y-external-message">ce lien</a>
+                  <strong>Pour Firefox™&nbsp;</strong>: ouvrez le menu «&nbsp;Outils&nbsp;», puis sélectionnez «&nbsp;Options&nbsp;»&nbsp;; cliquiez sur l’onglet «&nbsp;Vie privée&nbsp;» puis choisissez les options souhaitées ou suivez&nbsp;<a href="https://support.mozilla.org/fr/kb/activer-desactiver-cookies" aria-describedby="a11y-external-message">ce lien</a>
                 </li>
                 <li>
-                <strong>Pour Chrome™&nbsp;:&nbsp;</strong>ouvrez le menu de configuration (logo clé à molette), puis sélectionnez «&nbsp;Options&nbsp;»&nbsp;; cliquez sur «&nbsp;Options avancées&nbsp;» puis dans la section «&nbsp;Confidentialité&nbsp;» cliquez sur «&nbsp;Paramètres de contenu&nbsp;» et choisissez les options souhaitées ou suivez&nbsp;<a href="https://support.google.com/accounts/answer/61416?hl=fr" aria-describedby="a11y-external-message">ce lien</a>
+                  <strong>Pour Chrome™&nbsp;:&nbsp;</strong>ouvrez le menu de configuration (logo clé à molette), puis sélectionnez «&nbsp;Options&nbsp;»&nbsp;; cliquez sur «&nbsp;Options avancées&nbsp;» puis dans la section «&nbsp;Confidentialité&nbsp;» cliquez sur «&nbsp;Paramètres de contenu&nbsp;» et choisissez les options souhaitées ou suivez&nbsp;<a href="https://support.google.com/accounts/answer/61416?hl=fr" aria-describedby="a11y-external-message">ce lien</a>
                 </li>
                 <li>
-                <strong>Pour Safari™&nbsp;</strong>: choisissez «&nbsp;Safari&nbsp;», «&nbsp;Préférences&nbsp;» puis cliquez sur Sécurité&nbsp;»&nbsp;: Dans la section «&nbsp;Accepter les cookies&nbsp;» choisissez les options souhaitées ou suivez&nbsp;<a href="https://support.apple.com/fr-fr/HT1677" aria-describedby="a11y-external-message">ce lien</a>&nbsp;:</li>
-                <li>
-                <strong>Pour Opéra™&nbsp;</strong>: ouvrez le menu «&nbsp;Outils&nbsp;» ou «&nbsp;Réglages&nbsp;», puis sélectionnez «&nbsp;Supprimer les données privées&nbsp;»&nbsp;; cliquez sur l’onglet «&nbsp;Options détaillées&nbsp;», puis choisissez les options souhaitées ou suivez&nbsp;<a href="http://help.opera.com/Windows/10.20/fr/cookies.html" aria-describedby="a11y-external-message">ce lien</a>
+                  <strong>Pour Safari™&nbsp;</strong>: choisissez «&nbsp;Safari&nbsp;», «&nbsp;Préférences&nbsp;» puis cliquez sur Sécurité&nbsp;»&nbsp;: Dans la section «&nbsp;Accepter les cookies&nbsp;» choisissez les options souhaitées ou suivez&nbsp;<a href="https://support.apple.com/fr-fr/HT1677" aria-describedby="a11y-external-message">ce lien</a>&nbsp;:
                 </li>
-                </ul>
-                <p>&nbsp;</p>
-                <p><strong>Votre choix sur mobile</strong></p>
-                <ul>
+                <li>
+                  <strong>Pour Opéra™&nbsp;</strong>: ouvrez le menu «&nbsp;Outils&nbsp;» ou «&nbsp;Réglages&nbsp;», puis sélectionnez «&nbsp;Supprimer les données privées&nbsp;»&nbsp;; cliquez sur l’onglet «&nbsp;Options détaillées&nbsp;», puis choisissez les options souhaitées ou suivez&nbsp;<a href="http://help.opera.com/Windows/10.20/fr/cookies.html" aria-describedby="a11y-external-message">ce lien</a>
+                </li>
+              </ul>
+              <p>&nbsp;</p>
+              <p><strong>Votre choix sur mobile</strong></p>
+              <ul>
                 <li>Pour spécifier si Safari accepte ou non des cookies&nbsp;:</li>
-                </ul>
-                <ol>
+              </ul>
+              <ol>
                 <li>Dans l’écran principal, choisissez Réglages &gt; Safari</li>
                 <li>Touchez «&nbsp;Acceptez les cookies&nbsp;» et choisissez «&nbsp;Jamais&nbsp;», «&nbsp;Des sites visités&nbsp;» ou «&nbsp;Toujours&nbsp;».</li>
-                </ol>
-                <ul>
+              </ol>
+              <ul>
                 <li>Pour effacer tous les cookies dans Safari&nbsp;:
-                <ol>
-                <li>Dans l’écran principal, choisissez Réglages &gt; Safari</li>
-                <li>Touchez &nbsp;effacer les cookies.</li>
-                </ol>
+                  <ol>
+                    <li>Dans l’écran principal, choisissez Réglages &gt; Safari</li>
+                    <li>Touchez &nbsp;effacer les cookies.</li>
+                  </ol>
                 </li>
                 <li>Pour supprimer les cookies sur Android&nbsp;:</li>
                 <li>Menu &gt; Paramètres &gt; Effacer tous les&nbsp;cookies</li>
-                </ul>
+              </ul>
               </p>
             </div>
-            </div>
-            <div class="modal-footer">
-            
-            </div>
           </div>
-         </div>
+          <div class="modal-footer">
+
+          </div>
+        </div>
+      </div>
       <div class="modal" id="privacidadModal" tabindex="-1" aria-labelledby="privacidadModal" aria-hidden="true">
-          <div class="modal-dialog">
+        <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              
+
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="editMb2">
               <h2 class="modal-title text-center pb-2" id="privacidadModal">Informations clients et données personnelles</h2>
               <p>
-                <p>Identité : ELITE TRADE AG</p>
-                <p>Nº Registre : 81539277400015</p>
-                <p>Adresse Postale : 40/54<br>AVENUE SAINTE MARGUERITE<br>06200 NICE</p>
-                <p>Courrier Électronique : <a href="mailto:info01.elitebienetre@gmail.com" aria-describedby="a11y-external-message">info01.elitebienetre@gmail.com</a></p>
-                <p><strong>&nbsp;OBJECTIFS</strong></p>
-                <p><strong>ENVOI DES COMMANDES</strong></p>
-                <p>1.- Gérer vos demandes d'information et vos commandes</p>
-                <p>Nous utiliserons vos données pour gérer toute demande d'information que vous nous ferez et pour vous remettre les commandes que vous nous ferez.</p>
-                <p><span>2. - Envoi d'information commerciale et de publicité de nos produits</span></p>
-                <p>Nous utiliserons vos données pour vous envoyer des communications commerciales sur nos produits dont nous pensons qu'ils peuvent vous intéresser par tout moyen, automatisé ou non (courrier, SMS, MMS, fax, Internet, téléphone…), en utilisant l'information dont nous disposons sur vos transactions et vos préférences. Vous pouvez vous opposer à tout moment au traitement de vos données à cet effet, selon ce qui est spécifié au paragraphe&nbsp;</p>
-                <p><span>4. - Envoi d'information commerciale d'entreprises tierces.</span></p>
-                <p>Nous demandons votre consentement pour l'utilisation de vos données afin de vous envoyer des communications commerciales d'entreprises tierces dont nous pensons qu'elles peuvent vous intéresser par tout moyen, automatisé ou non (courrier, SMS, MMS, fax, Internet, téléphone…).</p>
-                <p>Vous pouvez vous opposer à tout moment au traitement de vos données dans ce but, selon ce qui est spécifié au paragraphe.</p>
-                <p>Les données fournies seront conservées pendant la relation commerciale avec notre entreprise, tant que leur suppression ne sera pas demandée par l'intéressé.</p>
-                <p>&nbsp;</p>
-                <h4><strong>LÉGITIMATION</strong></h4>
-                <p>Le traitement de vos données pour l'envoi de vos commandes se base sur l'exécution du contrat. L'offre prospective de nos produits se base sur l'intérêt légitime et les entreprises tierces se base sur le consentement de l'intéressé.</p>
-                <p>&nbsp;</p>
-                <h4><strong><a id="droits" name="droits"></a>DROITS</strong></h4>
-                <p>Toute personne a le droit d'obtenir une confirmation pour savoir si ELITE TRADE AG traite ou non des données personnelles qui la concernent.</p>
-                <p>Les personnes intéressées ont le droit d’accéder à leurs données personnelles, et à demander la rectification des données inexactes ou, le cas échéant, demander la suppression si, entre autres raisons, les données ne sont plus nécessaires pour les objectifs pour lesquels elles ont été recueillies.</p>
-                <p>Dans certains cas, les intéressés pourront demander la limitation du traitement de leurs données, cas dans lequel nous les conserverons uniquement pour l'exercice ou la défense de réclamations. Dans certaines circonstances et pour des raisons concernant leur situation particulière, les intéressés pourront s'opposer au traitement de leurs données.</p>
-                <p>ELITE TRADE AG cessera de traiter les données, sauf pour des motifs légitimes impérieux, ou pour exercer la défense de réclamations éventuelles. Si vous exercez le droit d'opposition à l'envoi de publicité, vos données seront incluses dans un listing d'exclusion publicitaire qui est destiné à diminuer la publicité que vous recevez.</p>
-                <p>Les personnes intéressées ont le droit à la portabilité de leurs données.</p>
-                <p>L'intéressé a également le droit de retirer à tout moment le consentement donné.</p>
-                <p>Pour exercer vos droits, nous vous demandons de nous communiquer la demande par écrit à&nbsp;Vibroflex&nbsp;en indiquant votre prénom, vos noms de famille, votre adresse, accompagné d'une copie de votre document officiel d'identification, par téléphone au nº 02&nbsp;78 88&nbsp;00&nbsp;81 ou de nous envoyer un e-mail à :&nbsp;<a href="mailto:info01.elitebienetre@gmail.com" aria-describedby="a11y-external-message">info01.elitebienetre@gmail.com</a></p>
-                <p>&nbsp;Mineurs.</p>
-                <p>Les moins de 14 ans doivent s'abstenir de nous indiquer leurs données personnelles Vous pouvez consulter la politique de confidentialité sur</p>
+              <p>Identité : ELITE TRADE AG</p>
+              <p>Nº Registre : 81539277400015</p>
+              <p>Adresse Postale : 40/54<br>AVENUE SAINTE MARGUERITE<br>06200 NICE</p>
+              <p>Courrier Électronique : <a href="mailto:info01.elitebienetre@gmail.com" aria-describedby="a11y-external-message">info01.elitebienetre@gmail.com</a></p>
+              <p><strong>&nbsp;OBJECTIFS</strong></p>
+              <p><strong>ENVOI DES COMMANDES</strong></p>
+              <p>1.- Gérer vos demandes d'information et vos commandes</p>
+              <p>Nous utiliserons vos données pour gérer toute demande d'information que vous nous ferez et pour vous remettre les commandes que vous nous ferez.</p>
+              <p><span>2. - Envoi d'information commerciale et de publicité de nos produits</span></p>
+              <p>Nous utiliserons vos données pour vous envoyer des communications commerciales sur nos produits dont nous pensons qu'ils peuvent vous intéresser par tout moyen, automatisé ou non (courrier, SMS, MMS, fax, Internet, téléphone…), en utilisant l'information dont nous disposons sur vos transactions et vos préférences. Vous pouvez vous opposer à tout moment au traitement de vos données à cet effet, selon ce qui est spécifié au paragraphe&nbsp;</p>
+              <p><span>4. - Envoi d'information commerciale d'entreprises tierces.</span></p>
+              <p>Nous demandons votre consentement pour l'utilisation de vos données afin de vous envoyer des communications commerciales d'entreprises tierces dont nous pensons qu'elles peuvent vous intéresser par tout moyen, automatisé ou non (courrier, SMS, MMS, fax, Internet, téléphone…).</p>
+              <p>Vous pouvez vous opposer à tout moment au traitement de vos données dans ce but, selon ce qui est spécifié au paragraphe.</p>
+              <p>Les données fournies seront conservées pendant la relation commerciale avec notre entreprise, tant que leur suppression ne sera pas demandée par l'intéressé.</p>
+              <p>&nbsp;</p>
+              <h4><strong>LÉGITIMATION</strong></h4>
+              <p>Le traitement de vos données pour l'envoi de vos commandes se base sur l'exécution du contrat. L'offre prospective de nos produits se base sur l'intérêt légitime et les entreprises tierces se base sur le consentement de l'intéressé.</p>
+              <p>&nbsp;</p>
+              <h4><strong><a id="droits" name="droits"></a>DROITS</strong></h4>
+              <p>Toute personne a le droit d'obtenir une confirmation pour savoir si ELITE TRADE AG traite ou non des données personnelles qui la concernent.</p>
+              <p>Les personnes intéressées ont le droit d’accéder à leurs données personnelles, et à demander la rectification des données inexactes ou, le cas échéant, demander la suppression si, entre autres raisons, les données ne sont plus nécessaires pour les objectifs pour lesquels elles ont été recueillies.</p>
+              <p>Dans certains cas, les intéressés pourront demander la limitation du traitement de leurs données, cas dans lequel nous les conserverons uniquement pour l'exercice ou la défense de réclamations. Dans certaines circonstances et pour des raisons concernant leur situation particulière, les intéressés pourront s'opposer au traitement de leurs données.</p>
+              <p>ELITE TRADE AG cessera de traiter les données, sauf pour des motifs légitimes impérieux, ou pour exercer la défense de réclamations éventuelles. Si vous exercez le droit d'opposition à l'envoi de publicité, vos données seront incluses dans un listing d'exclusion publicitaire qui est destiné à diminuer la publicité que vous recevez.</p>
+              <p>Les personnes intéressées ont le droit à la portabilité de leurs données.</p>
+              <p>L'intéressé a également le droit de retirer à tout moment le consentement donné.</p>
+              <p>Pour exercer vos droits, nous vous demandons de nous communiquer la demande par écrit à&nbsp;Vibroflex&nbsp;en indiquant votre prénom, vos noms de famille, votre adresse, accompagné d'une copie de votre document officiel d'identification, par téléphone au nº 02&nbsp;78 88&nbsp;00&nbsp;81 ou de nous envoyer un e-mail à :&nbsp;<a href="mailto:info01.elitebienetre@gmail.com" aria-describedby="a11y-external-message">info01.elitebienetre@gmail.com</a></p>
+              <p>&nbsp;Mineurs.</p>
+              <p>Les moins de 14 ans doivent s'abstenir de nous indiquer leurs données personnelles Vous pouvez consulter la politique de confidentialité sur</p>
               </p>
             </div>
-            </div>
-            <div class="modal-footer">
-            
-            </div>
           </div>
-         </div>
+          <div class="modal-footer">
+
+          </div>
+        </div>
+      </div>
       <div class="modal" id="garantiaModal" tabindex="-1" aria-labelledby="garantiaModal" aria-hidden="true">
-          <div class="modal-dialog">
+        <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              
+
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="editMb3">
               <h2 class="modal-title text-center pb-2" id="garantiaModal">Garantie</h2>
               <p>
-                  Les articles vendus sur Vibroflex sont reconnus par les plus grandes entreprises du secteur. Nous garantissons des produits de haute qualité et restons à l'écoute de nos clients. Nous sommes convaincus que le VibroFlex fonctionnera pour vous, cependant, si vous n'êtes pas 100% satisfaits des résultats que vous obtenez, vous n'avez qu'à le retourner dans les 90 jours et demander un remboursement.
+                Les articles vendus sur Vibroflex sont reconnus par les plus grandes entreprises du secteur. Nous garantissons des produits de haute qualité et restons à l'écoute de nos clients. Nous sommes convaincus que le VibroFlex fonctionnera pour vous, cependant, si vous n'êtes pas 100% satisfaits des résultats que vous obtenez, vous n'avez qu'à le retourner dans les 90 jours et demander un remboursement.
               </p>
             </div>
-            </div>
-            <div class="modal-footer">
-            
-            </div>
           </div>
-         </div>
+          <div class="modal-footer">
+
+          </div>
+        </div>
+      </div>
       <div class="modal" id="ventaModal" tabindex="-1" aria-labelledby="ventaModal" aria-hidden="true">
-          <div class="modal-dialog">
+        <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              
+
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body" id="editMb4">
               <h2 class="modal-title text-center pb-2" id="ventaModal">Conditions générales de vente</h2>
-             <p>Le présent site Internet vibroflex.fr (le " Site Internet") est édité par la société ELITE TRADE AG. 40/54<br>AVENUE SAINTE MARGUERITE<br>06200 NICE</p>
+              <p>Le présent site Internet vibroflex.fr (le " Site Internet") est édité par la société ELITE TRADE AG. 40/54<br>AVENUE SAINTE MARGUERITE<br>06200 NICE</p>
               <p>Email : <a href="mailto:info01.elitebienetre@gmail.com" aria-describedby="a11y-external-message">info01.elitebienetre@gmail.com</a>, numéro de téléphone:01 86 65 00 05 (offre valable uniquement sur la France métropolitaine)&nbsp;</p>
               <p><strong>Préambule</strong>&nbsp;</p>
               <p>Le Vendeur a pour activité la vente de biens à distance de produits de bien-être et de grande consommation.&nbsp;</p>
@@ -707,16 +673,16 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
               <p>&nbsp;Vous pouvez, à vos frais, vous faire assister par un conseil.&nbsp;</p>
               <p><strong>16. Loi applicable</strong></p>
               <p>Le présent Contrat sera régi par la loi française et le tribunal compétent sera celui tel que défini par les lois françaises.</p>
-  
-            </div>
-            </div>
-            <div class="modal-footer">
-            
+
             </div>
           </div>
-         </div>
+          <div class="modal-footer">
 
+          </div>
+        </div>
       </div>
+
     </div>
-    <?php ActiveForm::end(); ?>
+  </div>
+  <?php ActiveForm::end(); ?>
 </div>
