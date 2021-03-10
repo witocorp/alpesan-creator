@@ -25,7 +25,7 @@ body {
 .box_third_menu {
   padding-top: 25px;
   text-align: end;
-  padding-right: 2%;
+  padding-right: 2% !important;
 }
 .box_first_menu {
   padding-top: 15px;
