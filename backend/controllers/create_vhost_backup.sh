@@ -7,7 +7,7 @@
 
 #Agafem els parametres
 usr="apache"
-dir="/var/www/landingfy-creator.com/landings/"
+dir="/var/www/alpesan-creator.com/landings/"
 domini=$1
 
 #Crear directori web

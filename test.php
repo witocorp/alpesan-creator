@@ -1,6 +1,6 @@
 <?php
 $attachment  = "testdata1 \t testdata2 \t testdata3 \t \n testdata1 \t testdata2 \t testdata3 \t ";
-
+//este archivo es para borrar
 $to = 'osbendc@gmail.com'; 
 $subject = 'Test email with attachment'; 
 

@@ -99,7 +99,7 @@ $this->title = 'Landings';
           }else{
             $.ajax({
               method: 'POST',
-              url: 'https://landingfy-creator.com/backend/web/index.php?r=emails%2Fenvio',
+              url: 'https://alpesan-creator.com/backend/web/index.php?r=emails%2Fenvio',
               data: { id: 0, email: $('#emailAdmin').val(), carbon: $('#ccAdmin').val() }
             })
             .done(function( msg ) {
