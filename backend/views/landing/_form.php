@@ -7,7 +7,6 @@ use yii\widgets\ActiveForm;
 /* @var $model backend\models\Landing */
 /* @var $form yii\widgets\ActiveForm */
 
-$this->registerCssFile("/path/to/your/file/in/web/folder/style.css");
 $this->registerCssFile("@web/editor/css/froala_editor.css");
 $this->registerCssFile("@web/editor/css/froala_style.css");
 $this->registerCssFile("@web/editor/css/plugins/code_view.css");
