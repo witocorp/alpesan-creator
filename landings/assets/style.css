@@ -18,6 +18,12 @@ body {
     max-width: 60% !important;
   }
 }
+.box_third_menu {
+  padding-top: 25px;
+}
+.box_first_menu {
+  padding-top: 15px;
+}
 .form-check-inline {
   display: block !important;
 }

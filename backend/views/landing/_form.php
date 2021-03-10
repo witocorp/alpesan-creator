@@ -185,7 +185,7 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
       </div>
     </div>
     <div class="col h-100 block-design" id="code_html">
-      <div id="editH">
+      <div id="editH" class="row">
         <div class="col-md-12 text-center banner_head">
           <p>93 000 00 00</p>
         </div>
