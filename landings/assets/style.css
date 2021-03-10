@@ -25,6 +25,10 @@ body {
 .box_third_menu {
   padding-top: 25px;
 }
+.box_third_menu a {
+  text-align: end;
+  padding-right: 2%;
+}
 .box_first_menu {
   padding-top: 15px;
 }
