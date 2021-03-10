@@ -18,7 +18,7 @@ $this->title = 'Landings';
     </div>
     <div class="col text-right">
       <p>
-        <?= Html::a('<i class="fa fa-plus-circle" aria-hidden="true"></i> Create Landing', ['create'], ['class' => 'btn btn-primary pull-right']) ?>
+        <?= Html::a('<i class="fa fa-plus-circle" aria-hidden="true"></i> Create Landing', ['create'], ['class' => 'btn btn-success pull-right']) ?>
       </p>
     </div>
   </div>
