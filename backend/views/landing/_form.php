@@ -189,10 +189,7 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
         <div class="col-md-12 text-center banner_head">
           <p>93 000 00 00</p>
         </div>
-        <div class="col-md-4">
-          <a class="navbar-brand d-none d-sm-block" href="#"><img src="img/no-logo.jpg"></a>
-        </div>
-        <div class="col-md-4">
+         <div class="col-md-4">
           <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container-fluid">
               <a class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -210,27 +207,11 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
           </nav>  
         </div>
         <div class="col-md-4">
+          <a class="navbar-brand d-none d-sm-block" href="#"><img src="img/no-logo.jpg"></a>
+        </div>
+        <div class="col-md-4">
           <a class="btn btn-outline-danger d-none d-sm-block" href="#">Commander</a>
-        </div>  
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container-fluid">
-            <a class="navbar-brand d-sm-none mb-5" href="#"><img src="img/no-logo.jpg"></a>
-            <a class="btn btn-outline-danger d-sm-none" href="#">Commander</a>
-            <a class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-              <div class="navbar-toggler-icon"></div>
-            </a>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul class="navbar-nav mb-2 mb-lg-0">
-                <a href="#">Item</a>
-                <a href="#">Item</a>
-                <a href="#">Item</a>
-                <a href="#">Item</a>
-              </ul>
-              <a class="navbar-brand d-none d-sm-block" href="#"><img src="img/no-logo.jpg"></a>
-              <a class="btn btn-outline-danger d-none d-sm-block" href="#">Commander</a>
-            </div>
-          </div>
-        </nav>
+        </div> 
       </div>
       <main>
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
