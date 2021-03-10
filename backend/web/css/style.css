@@ -63,8 +63,8 @@
     font-weight: initial;
     line-height: initial;
 }
-#navbarTogglerDemo02 ul{
-	margin-left: auto !important;
+#navbarTogglerDemo02 {
+  justify-content: space-between;
 }
 .btn-outline-danger:hover {
     background-color: initial;
