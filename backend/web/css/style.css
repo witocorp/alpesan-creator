@@ -8,12 +8,12 @@
  }
  
 .box_third_menu {
-  padding-top: 25px;
+  padding-top: 1%;
   text-align: end;
   padding-right: 2% !important;
 }
 .box_first_menu {
-  padding-top: 15px;
+  padding-top: 1.5%;
 }
 #editH {
   --bs-gutter-x: 0 !important;
