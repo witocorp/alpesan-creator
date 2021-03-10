@@ -331,3 +331,8 @@ button {
 		margin: 2rem auto;	
 	}
 }
+
+.logo-alpesan {
+  display: flex;
+  margin-bottom: 3%;
+}
