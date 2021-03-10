@@ -107,7 +107,7 @@ header.container {
   justify-content: center;
 }
 .navbar-brand {
-    margin-right: -1rem !important;
+    margin-right: 0 !important;
 }
 .centrado {
   display: block !important;
