@@ -233,13 +233,9 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
       </main>
       <footer id="editF">
         <div class="container">
-          <div class="row align-items-top">
-            <div class="col-12 col-md-4 col-lg-4 ml-auto text-lg-left mt-4 mt-lg-0">
-              <img src="img/no-logo.jpg" class="img-responsive mb-3">
-              <p class="my-auto">© 2021. All Rights Reserved</p>
-            </div>
-
-            <div class="col-12 col-sm-12 col-md-8 col-lg-8 text-sm-left">
+          <div class="row">
+            
+            <div class="col-12 text-center">
               <nav class="nav flex-column">
                 <a class="nav-link active" href="#ventaModal">Conditions générales de vente</a>
                 <a class="nav-link" href="#garantiaModal">Garantie</a>
@@ -248,7 +244,12 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
                 <a class="nav-link" href="#legalModal">Mentions légales du site</a>
               </nav>
             </div>
+            <div class="col-12 mb-3 text-center">
+              <img src="img/no-logo.jpg" class="img-responsive mb-3">
+              <p class="my-auto">© 2021. All Rights Reserved</p>
+            </div>
           </div>
+
         </div>
       </footer>
       <div class="modal" id="legalModal" tabindex="-1" aria-labelledby="legalModal" aria-hidden="true">
