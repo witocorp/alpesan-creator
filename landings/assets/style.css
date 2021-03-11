@@ -10,7 +10,9 @@ body {
 body p {
   font-size: 1.75rem !important;
 }
-
+.fr-box.fr-basic .fr-element {
+  font-family: 'Roboto', sans-serif !important;
+}
 /*
  * Header
  */

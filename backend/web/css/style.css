@@ -4,13 +4,16 @@
  */
  
  body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif !important;
  }
 
  body p {
   font-size: 1.75rem !important;
 }
- 
+
+.fr-box.fr-basic .fr-element {
+  font-family: 'Roboto', sans-serif !important;
+}
 .banner_head p {
   margin: 0;
 }
