@@ -244,8 +244,8 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
                 <a class="nav-link" href="#legalModal">Mentions légales du site</a>
               </nav>
             </div>
-            <div class="col-12 mb-3 text-center">
-              <img src="img/no-logo.jpg" class="img-responsive mb-3">
+            <div class="col-12 mb-3 text-center mt-5">
+              <img src="img/no-logo.jpg" class="img-responsive mb-3 m-auto">
               <p class="my-auto">© 2021. All Rights Reserved</p>
             </div>
           </div>
