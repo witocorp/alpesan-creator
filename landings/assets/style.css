@@ -13,7 +13,11 @@ body {
 .banner_head p {
   margin: 0;
 }
-.alpesan_button {
+.alpessan_form {
+  padding: 5px 30px;
+  font-size: 20px !important;
+}
+.alpesan_button, .alpessan_form {
   color: white !important;
   background-color: #030658 !important;
   border-radius: 0px !important;
