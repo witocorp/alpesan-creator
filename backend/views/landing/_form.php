@@ -101,7 +101,7 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
     <?= $form->field($model, 'dominio')->textInput(['maxlength' => true]); ?>
   </div>
   <div class="col-md-4">
-    <?= $form->field($model, 'color')->textInput(['maxlength' => true]); ?>
+    <?= $form->field($model, 'color')->textInput(['maxlength' => true, 'value'=>'#030658']); ?>
   </div>
   <div class="col-md-12">
     <?= $form->field($model, 'descripcion')->textarea(['rows' => 3]); ?>
