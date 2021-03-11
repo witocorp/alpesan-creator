@@ -2,11 +2,17 @@
 /*
  * Header
  */
-
+ 
  body {
   font-family: 'Roboto', sans-serif;
  }
  
+.nbtn-outline-danger {
+  color: white !important;
+  background-color: blue !important;
+  border-radius: 0px !important;
+  border-color: blue !important;
+}
 .box_third_menu {
   padding-top: 1%;
   text-align: end;
