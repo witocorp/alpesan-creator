@@ -13,11 +13,17 @@ body {
 .banner_head p {
   margin: 0;
 }
-.nbtn-outline-danger {
+.btn-outline-danger {
   color: white !important;
   background-color: blue !important;
   border-radius: 0px !important;
   border-color: blue !important;
+}
+footer {
+  background-color: #030658;
+}
+footer a {
+  background-color: #030658;
 }
 @media (min-width: 576px) {
   .modal-dialog {

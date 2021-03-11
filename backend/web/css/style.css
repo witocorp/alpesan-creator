@@ -7,12 +7,19 @@
   font-family: 'Roboto', sans-serif;
  }
  
-.nbtn-outline-danger {
+.btn-outline-danger {
   color: white !important;
   background-color: blue !important;
   border-radius: 0px !important;
   border-color: blue !important;
 }
+footer {
+  background-color: #030658;
+}
+footer a {
+  background-color: #030658;
+}
+
 .box_third_menu {
   padding-top: 1%;
   text-align: end;
