@@ -19,9 +19,7 @@ body {
   border-radius: 0px !important;
   border-color: blue !important;
 }
-footer {
-  background-color: #030658;
-}
+
 footer a {
   background-color: #030658;
 }
@@ -159,7 +157,7 @@ header.container {
 /* Padding below the footer and lighter body text */
 
 footer {
-  background-color: #f6f6f6;
+  background-color: #030658;
   margin-top: 80px;
 }
 
