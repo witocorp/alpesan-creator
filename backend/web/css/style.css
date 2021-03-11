@@ -231,6 +231,9 @@ p[data-f-id="pbf"] {
   width: 20px;
   height: 22px;
 }
+footer img {
+  width: 100% !important;
+}
 /* Carousel base class */
 .carousel {
   margin-bottom: 4rem;
