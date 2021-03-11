@@ -203,9 +203,9 @@ header.container {
 /* GLOBAL STYLES
 	-------------------------------------------------- */
 /* Padding below the footer and lighter body text */
-footer .fr-box.fr-basic .fr-wrapper {
-  background-color: #030658;
 
+footer .fr-wrapper {
+    background: #030658 !important;
 }
 body {
   /* padding-bottom: 3rem; */
