@@ -210,7 +210,7 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
           <a class="navbar-brand" href="#"><img src="img/no-logo.jpg" class="centrado"></a>
         </div>
         <div class="col-4 col-sm-4 box_third_menu">
-          <a class="btn btn-outline-danger" href="#">Commander</a>
+          <a class="btn alpesan_button" href="#">Commander</a>
         </div> 
       </div>
       <main>

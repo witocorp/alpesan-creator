@@ -13,11 +13,11 @@ body {
 .banner_head p {
   margin: 0;
 }
-.btn-outline-danger {
+.alpesan_button {
   color: white !important;
-  background-color: blue !important;
+  background-color: #030658 !important;
   border-radius: 0px !important;
-  border-color: blue !important;
+  border-color: #030658 !important;
 }
 
 footer a, footer p {
