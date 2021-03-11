@@ -20,7 +20,7 @@ body {
   border-color: blue !important;
 }
 
-footer a {
+footer a, footer p {
   color: #fff;
 }
 @media (min-width: 576px) {

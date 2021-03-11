@@ -18,7 +18,7 @@ footer {
   background-color: #030658;
 }
 
-footer a {
+footer a, footer p {
   color: #fff;
 }
 
@@ -203,7 +203,10 @@ header.container {
 /* GLOBAL STYLES
 	-------------------------------------------------- */
 /* Padding below the footer and lighter body text */
+footer .fr-box.fr-basic .fr-wrapper {
+  background-color: #030658;
 
+}
 body {
   /* padding-bottom: 3rem; */
   color: #5a5a5a;
