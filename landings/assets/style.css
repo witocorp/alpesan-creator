@@ -21,7 +21,7 @@ body {
 }
 
 footer a {
-  background-color: #030658;
+  color: #fff;
 }
 @media (min-width: 576px) {
   .modal-dialog {
@@ -239,7 +239,7 @@ p[data-f-id="pbf"] {
   letter-spacing: -0.05rem;
 }
 footer img {
-  width: 100% !important;
+  width: 30% !important;
 }
 /* RESPONSIVE CSS
 	-------------------------------------------------- */

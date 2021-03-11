@@ -13,11 +13,13 @@
   border-radius: 0px !important;
   border-color: blue !important;
 }
+
 footer {
   background-color: #030658;
 }
+
 footer a {
-  background-color: #030658;
+  color: #fff;
 }
 
 .box_third_menu {
@@ -245,7 +247,7 @@ p[data-f-id="pbf"] {
   height: 22px;
 }
 footer img {
-  width: 100% !important;
+  width: 30% !important;
 }
 /* Carousel base class */
 .carousel {
