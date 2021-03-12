@@ -23,7 +23,6 @@ class Landing extends \yii\db\ActiveRecord
     {
         return 'landing';
     }
-
     /**
      * {@inheritdoc}
      */
@@ -33,6 +32,7 @@ class Landing extends \yii\db\ActiveRecord
             [['titulo', 'descripcion', 'codigo', 'dominio', 'color'], 'required'],
             [['dominio'], 'unique'],
             [['codigo'], 'string'],
+            [['dominio'], 'trim'],
             [['titulo', 'descripcion', 'dominio', 'color'], 'string', 'max' => 500],
         ];
     }
