@@ -31,7 +31,7 @@ class Landing extends \yii\db\ActiveRecord
     {
         return [
             [['titulo', 'descripcion', 'codigo', 'dominio', 'color'], 'required'],
-            [['dominio'], 'unique'],
+            ['dominio', 'unique', 'targetAttribute' => ['dominio'], 'message' => 'Dominio repetido.'],
             [['codigo'], 'string'],
             [['titulo', 'descripcion', 'dominio', 'color'], 'string', 'max' => 500],
         ];
