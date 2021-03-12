@@ -93,7 +93,7 @@ $this->registerJsFile("@web/editor/js/script.js", ['depends' => 'yii\web\JqueryA
 <input type="button" id="ver_codigo" value="Create landing" class="btn btn-success pull-right">
 <div class="landing-form">
   <h3><i class="fa fa-cog" aria-hidden="true"></i> Options</h3>
-  <?php $form = ActiveForm::begin(); ?>
+  <?php $form = ActiveForm::begin(['enableAjaxValidation' => true]); ?>
   <div class="col-md-4"><i class="bi bi-align-bottom"></i>
     <?= $form->field($model, 'titulo')->textInput(['maxlength' => true]); ?>
   </div>

@@ -12,6 +12,8 @@ use yii\helpers\Url;
 use yii\filters\AccessControl;
 use backend\models\Email;
 use backend\models\EmailSearch;
+use yii\web\Response;
+use yii\widgets\ActiveForm;
 /**
  * LandingController implements the CRUD actions for Landing model.
  */
@@ -85,6 +87,10 @@ class LandingController extends Controller
     public function actionCreate()
     {
 		$model = new Landing();
+        if (Yii::$app->request->isAjax && $model->load(Yii::$app->request->post())) {
+            Yii::$app->response->format = Response::FORMAT_JSON;
+            return ActiveForm::validate($model);
+        }
 		if ($model->load(Yii::$app->request->post())) {
             $model->save();
 			$url = $_SERVER['DOCUMENT_ROOT']."/landings/".$model->dominio;
