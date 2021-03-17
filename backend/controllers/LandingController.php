@@ -168,7 +168,11 @@ class LandingController extends Controller
 		//rmdir($url);
 		
 		$modelEmail = Email::find()->where(['idLanding'=>$model->id])->one();
-	    print_r($modelEmail);
+	    if($modelEmail){
+            echo "hay";
+        }else{
+            echo "no hay";
+        }
         //$modelEmail->delete();
 
 	    //$model->delete();
