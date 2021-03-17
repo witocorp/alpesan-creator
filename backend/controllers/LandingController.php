@@ -164,19 +164,15 @@ class LandingController extends Controller
     {
         $model = $this->findModel($id);
 		$url = $_SERVER['DOCUMENT_ROOT']."/landings/".$model->dominio;
-		//unlink($url.'/index.html');
-		//rmdir($url);
+		unlink($url.'/index.html');
+		rmdir($url);
 		
 		$modelEmail = Email::find()->where(['idLanding'=>$model->id])->one();
 	    if($modelEmail){
-            echo "hay";
-        }else{
-            echo "no hay";
+            $modelEmail->delete();
         }
-        //$modelEmail->delete();
-
-	    //$model->delete();
-        //return $this->redirect(['index']);
+        $model->delete();
+        return $this->redirect(['index']);
     }
 
     /**
