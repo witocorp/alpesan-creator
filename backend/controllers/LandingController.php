@@ -166,7 +166,11 @@ class LandingController extends Controller
 		$url = $_SERVER['DOCUMENT_ROOT']."/landings/".$model->dominio;
 		unlink($url.'/index.html');
 		rmdir($url);
-		$model->delete();
+		
+		$modelEmail = Email::find()->where(['idLanding'=>$model->id])->one();
+	    $modelEmail->delete();
+
+	    $model->delete();
         return $this->redirect(['index']);
     }
 
