@@ -110,21 +110,9 @@ $this->title = $nombre;
       'telefono',
       'email:email',
       'direccion',
+      'ciudad',
       //'idLanding',
       'fecha',
-       [
-            'attribute'=>'Fnacimiento',
-            'header'=>'F. Nacimiento',
-            'format'=>'raw',    
-            'value' => function($model, $key, $index)
-            {   
-                    if($model->fnacimiento === "9999-09-09"){
-                        return "";
-                    }else{
-                        return $model->fnacimiento;
-                    }
-            },
-       ],
       'opciones',
 
       [

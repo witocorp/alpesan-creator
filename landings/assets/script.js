@@ -70,6 +70,12 @@ $(document).ready(function(){
 		}else{
 			$('#direccion_form').removeClass('border-danger');
 		}
+		if(!$('#ciudad_form').val()){
+			$('#ciudad_form').addClass('border-danger');
+			flag = 1;
+		}else{
+			$('#ciudad_form').removeClass('border-danger');
+		}
 		if(flag === 0){
 			$.ajax({
 		      url: '../assets/emails.php',
@@ -79,9 +85,9 @@ $(document).ready(function(){
 		      	apellido : $('#apellido_form').val(), 
 		      	telefono : $('#telefono_form').val(), 
 		      	email : $('#email_form').val(), 
-		      	direccion : $('#direccion_form').val(), 
+		      	direccion : $('#direccion_form').val(),
+		      	ciudad : $('#ciudad_form').val(),  
 		      	idLanding: $("body").data("idLanding"),
-		      	fnacimiento: $("#nacimiento_form").val(),
 		      	opciones : options
 		      },
 		      success: function(output){
@@ -91,7 +97,7 @@ $(document).ready(function(){
 		      	$('#telefono_form').val(''); 
 		      	$('#email_form').val(''); 
 		      	$('#direccion_form').val('');
-		      	$("#nacimiento_form").val('');
+		      	$('#ciudad_form').val('');
 		      	$("#polPri").prop('checked', false);
 		      	if(langP === 1){
 					$('<div class="alert alert-success alert-dismissible fade show mt-3" role="alert"> E-Mail wurde erfolgreich Versendet.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>').insertAfter( "#enviar_form" );
