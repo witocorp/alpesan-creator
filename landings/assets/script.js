@@ -9,7 +9,6 @@ $(document).ready(function(){
 	$('.btn.btn-outline-danger.d-sm-none').text(a_text);
 	var langP = $("#enviar_form").data("lan");
 	if(!$('#polPri').length){
-		langP = 1;
 		localStorage.setItem("web_dev_isCookieAccepted", "yes");
 		cookieBanner = document.getElementsByClassName("nk-cookie-banner")[0];
     	cookieBanner.style.display = "none";
@@ -33,7 +32,6 @@ $(document).ready(function(){
 			$($(this).attr("href")).modal('show');
 	});
 	$('#enviar_form').on('click', function(){
-		console.log(langP);
 		var flag = 0;
 		var options = "";	
 		$("input[type=radio]:checked").each(function() {
