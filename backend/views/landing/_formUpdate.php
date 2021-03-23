@@ -200,11 +200,35 @@ $this->registerJsFile("@web/editor/js/script_update.js", ['depends' => 'yii\web\
               style="border: 1px solid; cursor: pointer" class="img-responsive"
             />
           </div>
-           <h5 class="text-left my-md-3 text-center">Contacto</h5>
+           <h5 class="text-left my-md-3 text-center">Contacto Frances</h5>
           <div class="text-left my-md-3">
             <img
               src="img/contacto.png"
               id="cn8"
+              style="border: 1px solid; cursor: pointer" class="img-responsive"
+            />
+          </div>
+          <p>Sin política de privacidad</p>
+          <div class="text-left my-md-3">
+            <img
+              src="img/contacto.png"
+              id="cn9"
+              style="border: 1px solid; cursor: pointer" class="img-responsive"
+            />
+          </div>
+           <h5 class="text-left my-md-3 text-center">Contacto Alemán</h5>
+          <div class="text-left my-md-3">
+            <img
+              src="img/contacto.png"
+              id="cn10"
+              style="border: 1px solid; cursor: pointer" class="img-responsive"
+            />
+          </div>
+          <p>Sin política de privacidad</p>
+          <div class="text-left my-md-3">
+            <img
+              src="img/contacto.png"
+              id="cn11"
               style="border: 1px solid; cursor: pointer" class="img-responsive"
             />
           </div>

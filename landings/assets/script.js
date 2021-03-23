@@ -3,8 +3,12 @@ function validateEmail($email) {
   return emailReg.test( $email );
 }
 $(document).ready(function(){
-	var langP = 0;
-	if($('#polPri').is(':checked')){
+	var a_href = $('#navbarTogglerDemo02').find('.btn').attr('href');
+	var a_text = $('#navbarTogglerDemo02').find('.btn').text();
+	$('.btn.btn-outline-danger.d-sm-none').attr("href", a_href);
+	$('.btn.btn-outline-danger.d-sm-none').text(a_text);
+	var langP = $("#enviar_form").data("lan");
+	if(!$('#polPri').length){
 		langP = 1;
 		localStorage.setItem("web_dev_isCookieAccepted", "yes");
 		cookieBanner = document.getElementsByClassName("nk-cookie-banner")[0];
@@ -29,6 +33,7 @@ $(document).ready(function(){
 			$($(this).attr("href")).modal('show');
 	});
 	$('#enviar_form').on('click', function(){
+		console.log(langP);
 		var flag = 0;
 		var options = "";	
 		$("input[type=radio]:checked").each(function() {
@@ -46,29 +51,25 @@ $(document).ready(function(){
 		}else{
 			$('#apellido_form').removeClass('border-danger');
 		}
-		if($('#polPri').is(':checked')){
-			$('#polPri').removeClass('border-danger');
-		}else{
-			$('#polPri').addClass('border-danger');
-			flag = 1;
-		}
-		if(!$('#telefono_form').val()){
-			$('#telefono_form').addClass('border-danger');
-			flag = 1;
-		}else{
-			$('#telefono_form').removeClass('border-danger');
-		}
-		if(!$('#email_form').val() || !validateEmail($('#email_form').val())){
-			$('#email_form').addClass('border-danger');
-			flag = 1;
-		}else{
-			$('#email_form').removeClass('border-danger');
+		if($('#polPri').length){
+			if($('#polPri').is(':checked')){
+				$('#polPri').removeClass('border-danger');
+			}else{
+				$('#polPri').addClass('border-danger');
+				flag = 1;
+			}
 		}
 		if(!$('#direccion_form').val()){
 			$('#direccion_form').addClass('border-danger');
 			flag = 1;
 		}else{
 			$('#direccion_form').removeClass('border-danger');
+		}
+		if(!$('#cp_form').val()){
+			$('#cp_form').addClass('border-danger');
+			flag = 1;
+		}else{
+			$('#cp_form').removeClass('border-danger');
 		}
 		if(!$('#ciudad_form').val()){
 			$('#ciudad_form').addClass('border-danger');
@@ -86,8 +87,10 @@ $(document).ready(function(){
 		      	telefono : $('#telefono_form').val(), 
 		      	email : $('#email_form').val(), 
 		      	direccion : $('#direccion_form').val(),
-		      	ciudad : $('#ciudad_form').val(),  
+		      	ciudad : $('#ciudad_form').val(),
+		      	codP : $('#cp_form').val(), 
 		      	idLanding: $("body").data("idLanding"),
+		      	//fnacimiento: $("#nacimiento_form").val(),
 		      	opciones : options
 		      },
 		      success: function(output){
@@ -98,8 +101,10 @@ $(document).ready(function(){
 		      	$('#email_form').val(''); 
 		      	$('#direccion_form').val('');
 		      	$('#ciudad_form').val('');
+		      	$('#cp_form').val('');
+		      	$("#nacimiento_form").val('');
 		      	$("#polPri").prop('checked', false);
-		      	if(langP === 1){
+		      	if(langP === "al"){
 					$('<div class="alert alert-success alert-dismissible fade show mt-3" role="alert"> E-Mail wurde erfolgreich Versendet.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>').insertAfter( "#enviar_form" );
 				}else{
 					$('<div class="alert alert-success alert-dismissible fade show mt-3" role="alert"> E-mail envoyé avec succès.<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> </div>').insertAfter( "#enviar_form" );
