@@ -12,4 +12,5 @@ if (mail("hello@witocorp.com","My subject",$msg)) {
 } else {
   echo "email no enviado";
 }
+
 ?>
